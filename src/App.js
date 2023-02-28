@@ -1,4 +1,6 @@
 import "./App.css";
+import "./Test.js";
+import Test from "./Test";
 
 function App() {
   const name = "Vitalik!";
@@ -43,6 +45,7 @@ function App() {
     <div>
       {elem}
       {test(users)}
+      <Test />
     </div>
   );
 }
