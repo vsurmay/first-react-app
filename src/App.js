@@ -32,13 +32,17 @@ function App() {
 
   function test(users) {
     return (
-      <li>{users.map((user) => `Hey ${user.firstName} ${user.lastName}`)}</li>
+      <ul>
+        {users.map((user) => (
+          <li>{`Hey ${user.firstName} ${user.lastName}`}</li>
+        ))}
+      </ul>
     );
   }
   return (
     <div>
       {elem}
-      <ul>{test(users)}</ul>
+      {test(users)}
     </div>
   );
 }
