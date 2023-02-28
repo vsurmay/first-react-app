@@ -1,3 +1,4 @@
+import Link from "./Link";
 import "./User.css";
 
 function User(props) {
@@ -15,6 +16,7 @@ function User(props) {
         <li>{props.user.address.city}</li>
         <li>{props.user.email}</li>
       </ul>
+      <Link text="Read more" />
     </div>
   );
 }
