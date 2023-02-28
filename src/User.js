@@ -1,4 +1,5 @@
 import Link from "./Link";
+import Title from "./Title";
 import "./User.css";
 
 function User(props) {
@@ -8,8 +9,7 @@ function User(props) {
       <div className="index-container">
         <span className="item__index">{props.user.id}</span>
       </div>
-
-      <h2>{props.user.name}</h2>
+      <Title gender={props.user.gender} text={props.user.name} />
       <ul>
         <li>{props.user.username}</li>
         <li>{props.user.address.suite}</li>
