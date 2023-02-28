@@ -23,7 +23,7 @@ function App() {
       lastName: "Hfsdd",
     },
     {
-      firstName: "Vitalik",
+      firstName: "italik",
       lastName: "Surmay",
     },
     {
@@ -36,7 +36,9 @@ function App() {
     return (
       <ul>
         {users.map((user) => (
-          <li>{`Hey ${user.firstName} ${user.lastName}`}</li>
+          <li
+            key={user.firstName}
+          >{`Hey ${user.firstName} ${user.lastName}`}</li>
         ))}
       </ul>
     );
