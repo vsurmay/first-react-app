@@ -1,5 +1,5 @@
 import "./List.css";
-import ListItem from "./ListItem";
+import ListItem from "../Listitem/ListItem";
 
 function List(props) {
   return (

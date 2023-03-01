@@ -1,5 +1,5 @@
 import "./App.css";
-import User from "./User";
+import User from "./components/User/User";
 
 function App() {
   const users = [

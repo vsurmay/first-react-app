@@ -1,6 +1,6 @@
-import Link from "./Link";
-import Title from "./Title";
-import List from "./List";
+import Link from "../Link/Link";
+import Title from "../Title/Title";
+import List from "../List/List";
 import "./User.css";
 
 function User(props) {
