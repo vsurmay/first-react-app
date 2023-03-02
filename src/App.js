@@ -3,50 +3,9 @@ import "./Test.js";
 import Test from "./Test";
 
 function App() {
-  const name = "Vitalik!";
-  const elem = <h1>Hey! {name}</h1>;
-  const users = [
-    {
-      firstName: "Oleg",
-      lastName: "Mant",
-    },
-    {
-      firstName: "Lofjd",
-      lastName: "Idja",
-    },
-    {
-      firstName: "Pofsd",
-      lastName: "Aqdhfdsf",
-    },
-    {
-      firstName: "Afjlsdj",
-      lastName: "Hfsdd",
-    },
-    {
-      firstName: "italik",
-      lastName: "Surmay",
-    },
-    {
-      firstName: "Vitalik",
-      lastName: "Surmay",
-    },
-  ];
-
-  function test(users) {
-    return (
-      <ul>
-        {users.map((user) => (
-          <li
-            key={user.firstName}
-          >{`Hey ${user.firstName} ${user.lastName}`}</li>
-        ))}
-      </ul>
-    );
-  }
   return (
     <div>
-      {elem}
-      {test(users)}
+      Hey!
       <Test />
     </div>
   );

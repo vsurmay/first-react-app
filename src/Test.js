@@ -1,10 +1,10 @@
 import "./Test.css";
+import React from "react";
 
-const Test = (props) => {
-  const data = "Test";
-
-  console.log(props);
-  return <div className="test">{data}</div>;
-};
+class Test extends React.Component {
+  render() {
+    return <div>hey i class component</div>;
+  }
+}
 
 export default Test;
