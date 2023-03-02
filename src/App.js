@@ -1,6 +1,6 @@
 import "./App.css";
-import "./Test.js";
-import Test from "./Test";
+import "./LifeCicle.js";
+import Test from "./LifeCicle";
 import React from "react";
 
 function App() {
