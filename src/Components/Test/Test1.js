@@ -1,7 +1,7 @@
 import "./Test.scss";
 
-function Test1() {
-  return <div className="testt">Hey</div>;
+function Test1(props) {
+  return <div className="testt">Hey  {props.text}</div>;
 }
 
 export default Test1;
