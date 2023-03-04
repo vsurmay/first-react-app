@@ -2,6 +2,7 @@ import "./Hero.scss";
 import image from "../Hero/burger-img.png";
 import Title from "../Title/Title";
 import PageText from "../PageText/PageText";
+import Button from "../Button/Button";
 
 function Hero() {
   return (
@@ -13,6 +14,7 @@ function Hero() {
             <PageText className="hero__text">
               we have a lot of yummy recipes from all aruond the world.
             </PageText>
+            <Button>See Recipes</Button>
           </div>
           <div className="hero__item">
             <img src={image} alt="burger image" />
