@@ -11,7 +11,7 @@ import image07 from "./img/green-salad.jpg";
 function ListMain() {
   return (
     <section className="section__list">
-      <div className="container__less">
+      <div className="container-less">
         <div className="list__wrapper">
           <ListItem image={image01} />
           <ListItem image={image02} />
