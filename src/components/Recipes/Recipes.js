@@ -1,5 +1,5 @@
-import Title from "../Pages/Page/PageTitle/Title";
-import RecipesItem from "../RecipesItem/RecipesItem";
+import PageTitle from "../Pages/Page/PageTitle/PageTitle";
+import RecipesItem from "./RecipesItem/RecipesItem";
 import data from "./data";
 import "./Recipes.scss";
 
@@ -9,7 +9,7 @@ function Recipes() {
     <section className="section__recipes">
       <div className="container">
         <div className="recipes">
-          <Title center>Recipes</Title>
+          <PageTitle center>Recipes</PageTitle>
           <div className="recipes__wrapper">
             {data.map((el) => (
               <RecipesItem key={el.id} element={el} />
