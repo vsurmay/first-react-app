@@ -1,13 +1,9 @@
-import "./App.scss";
-
 import React from "react";
+import "./App.scss";
+import Page from "./components/Page/Page";
 
 function App() {
-  return (
-    <div className="container">
-      <div className="test">Hey</div>
-    </div>
-  );
+  return <Page />;
 }
 
 export default App;

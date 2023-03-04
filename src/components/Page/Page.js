@@ -1,7 +1,8 @@
-import "./Pade.scss";
+import "./Page.scss";
+import Header from "../Header/Header";
 
 function Page() {
-  return;
+  return <Header />;
 }
 
 export default Page;
