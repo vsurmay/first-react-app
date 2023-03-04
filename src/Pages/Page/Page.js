@@ -1,11 +1,10 @@
-import "./Page.scss";
 import Header from "../../components/Header/Header";
 import Hero from "./Hero/Hero";
 import Recipes from "./Recipes/Recipes";
 
 function Page() {
   return (
-    <div className="page">
+    <div className="page-page">
       <Header />
       <Hero />
       <Recipes />
