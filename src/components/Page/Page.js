@@ -4,7 +4,7 @@ import Hero from "../Hero/Hero";
 
 function Page() {
   return (
-    <div>
+    <div className="page">
       <Header />
       <Hero />
     </div>
