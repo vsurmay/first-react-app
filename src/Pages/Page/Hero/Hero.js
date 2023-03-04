@@ -2,7 +2,7 @@ import "./Hero.scss";
 import image from "../Hero/burger-img.png";
 import PageTitle from "../PageTitle/PageTitle";
 import PageText from "../PageText/PageText";
-import Button from "../../../Button/Button";
+import Button from "../../../components/Button/Button";
 
 function Hero() {
   return (

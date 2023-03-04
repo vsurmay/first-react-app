@@ -1,4 +1,4 @@
-import PageTitle from "../Pages/Page/PageTitle/PageTitle";
+import PageTitle from "../PageTitle/PageTitle";
 import RecipesItem from "./RecipesItem/RecipesItem";
 import data from "./data";
 import "./Recipes.scss";
