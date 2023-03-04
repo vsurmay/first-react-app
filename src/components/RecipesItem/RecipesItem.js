@@ -1,5 +1,5 @@
-import Title from "../Title/Title";
-import PageText from "../PageText/PageText";
+import Title from "../Pages/Page/PageTitle/Title";
+import PageText from "../Pages/Page/PageText/PageText";
 import "./RecipesItem.scss";
 
 function RecipesItem(props) {

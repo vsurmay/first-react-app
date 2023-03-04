@@ -1,7 +1,7 @@
 import "./Page.scss";
-import Header from "../Header/Header";
-import Hero from "../Hero/Hero";
-import Recipes from "../Recipes/Recipes";
+import Header from "../../Header/Header";
+import Hero from "../../Hero/Hero";
+import Recipes from "../../Recipes/Recipes";
 
 function Page() {
   return (
