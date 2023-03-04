@@ -1,9 +1,15 @@
 import React from "react";
 import "./App.scss";
+import List from "./Pages/List/List";
 import Page from "./Pages/Page/Page";
 
 function App() {
-  return <Page />;
+  return (
+    <div>
+      {/* <Page /> */}
+      <List />
+    </div>
+  );
 }
 
 export default App;
