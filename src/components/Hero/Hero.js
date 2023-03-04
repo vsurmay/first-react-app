@@ -14,7 +14,7 @@ function Hero() {
             <PageText className="hero__text">
               we have a lot of yummy recipes from all aruond the world.
             </PageText>
-            <Button>See Recipes</Button>
+            <Button className="hero__btn">See Recipes</Button>
           </div>
           <div className="hero__item">
             <img src={image} alt="burger image" />
