@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import "./LifeCicle.js";
 import Test from "./LifeCicle";
 import React from "react";
