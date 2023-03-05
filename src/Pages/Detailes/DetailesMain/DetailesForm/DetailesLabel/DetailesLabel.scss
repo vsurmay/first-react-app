@@ -1,0 +1,11 @@
+.detailes__label {
+    padding: 15px;
+    width: 97%;
+    background: #FBFBFB;
+    display: flex;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}

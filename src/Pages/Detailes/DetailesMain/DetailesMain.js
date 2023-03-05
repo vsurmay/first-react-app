@@ -1,4 +1,6 @@
+import "./DetailesMain.scss";
 import DetailesAbout from "./DetailesAbout/DetailesAbout";
+import DeatilesForm from "./DetailesForm/DeatilesForm";
 
 function DetailesMain() {
   return (
@@ -6,6 +8,7 @@ function DetailesMain() {
       <div className="container">
         <div className="detailes">
           <DetailesAbout />
+          <DeatilesForm />
         </div>
       </div>
     </div>
