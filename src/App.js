@@ -7,9 +7,9 @@ import Page from "./Pages/Page/Page";
 function App() {
   return (
     <div>
-      <Page />
+      {/* <Page /> */}
       {/* <List /> */}
-      {/* <Detailes /> */}
+      <Detailes />
     </div>
   );
 }
