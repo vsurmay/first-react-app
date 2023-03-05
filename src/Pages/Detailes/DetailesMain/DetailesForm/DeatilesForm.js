@@ -15,7 +15,7 @@ function DeatilesForm() {
   return (
     <form className="detailes__form">
       {labelTexts.map((el, index) => {
-        <DetailesLabel key={index} text={el} />;
+        return <DetailesLabel key={index} text={el} />;
       })}
 
       {/* <DetailesLabel text="1 3-4 lb corned beef brisket" />
