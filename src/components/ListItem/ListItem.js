@@ -1,11 +1,12 @@
-import Button from "../../../../components/Button/Button";
+import Button from "../Button/Button";
 import "./ListItem.scss";
-import ListItemLink from "./listItemLink/ListItemLink";
+import ListItemLink from "../ListItemLink/ListItemLink";
+import Image from "../Image/Image";
 
 function ListItem(props) {
   return (
     <div className="list__item">
-      <img src={props.image} alt="dish" />
+      <Image url={props.data.image} alt={props.data.name} />
       <div className="list__item-discription">
         <ListItemLink />
         <ListItemLink />

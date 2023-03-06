@@ -1,5 +1,4 @@
-import Header from "../../components/Header/Header";
-import ListMain from "./ListMain/ListMain";
+import ListMain from "../../components/ListMain/ListMain";
 
 function List() {
   return (

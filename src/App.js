@@ -1,16 +1,16 @@
 import React from "react";
 import "./App.scss";
 import Header from "./components/Header/Header";
-import Detailes from "./Pages/Detailes/Detailes";
-import List from "./Pages/List/List";
-import Page from "./Pages/Page/Page";
+import Detailes from "./pages/Detailes/Detailes";
+import List from "./pages/List/List";
+import Page from "./pages/Page/Page";
 
 function App() {
   return (
     <div>
       <Header />
-      <Page />
-      {/* <List /> */}
+      {/* <Page /> */}
+      <List />
       {/* <Detailes /> */}
     </div>
   );

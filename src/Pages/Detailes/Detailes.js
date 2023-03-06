@@ -1,10 +1,10 @@
-import DetailesMain from "./DetailesMain/DetailesMain";
+// import DetailesMain from "";
 
-function Detailes() {
-  return (
-    <div className="detailes-page">
-      <DetailesMain />
-    </div>
-  );
-}
-export default Detailes;
+// function Detailes() {
+//   return (
+//     <div className="detailes-page">
+//       <DetailesMain />
+//     </div>
+//   );
+// }
+// export default Detailes;

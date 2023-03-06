@@ -1,9 +1,20 @@
+import image01 from "../src/img/recipes/dessert.jpg";
+import image02 from "../src/img/recipes/drink.jpg";
+import image03 from "../src/img/recipes/mainDish.jpg";
+import image04 from "../src/img/recipes/sideDish.jpg";
+import image05 from "../src/img/list/cake.jpg";
+import image06 from "../src/img/list/coctails.jpg";
+import image07 from "../src/img/list/pasta.jpg";
+import image08 from "../src/img/list/delish.jpg";
+import image09 from "../src/img/list/salad.jpg";
+import image10 from "../src/img/list/green-salad.jpg";
+
 const data = [
   {
     id: 1,
     name: "Dessert",
     description: "there is so many dessert recipes",
-    image: "https://via.placeholder.com/365",
+    image: image01,
     items: [
       {
         id: 1,
@@ -26,7 +37,7 @@ const data = [
         ],
         recipe:
           "Preheat oven to 350°F. Grease and flour two 9-inch round cake pans. In a large bowl, combine flour, cocoa, sugar, baking soda, baking powder, and salt. Add buttermilk, oil, eggs, and vanilla; beat on low speed for 30 seconds. Beat on high speed for 2 minutes. Stir in hot water (batter will be thin). Pour batter into prepared pans. Bake 30 to 35 minutes or until a toothpick inserted in the center comes out clean. Cool 10 minutes; remove from pans to wire racks. Cool completely.",
-        image: "https://via.placeholder.com/300x200?text=Chocolate+Cake",
+        image: image05,
       },
       {
         id: 2,
@@ -47,7 +58,7 @@ const data = [
         ],
         recipe:
           "Preheat oven to 325°F. In a large bowl, mix together graham cracker crumbs, melted butter, and sugar. Press mixture into bottom and up sides of a 9-inch springform pan. Bake crust for 10 minutes. Let cool. In a large bowl, beat cream cheese with an electric mixer until creamy. Add sugar and vanilla extract; beat until smooth. Add eggs, one at a time, beating well after each addition. Stir in heavy cream. Pour half of the cheesecake mixture into crust. Spoon strawberry puree over cheesecake mixture. Pour remaining cheesecake mixture over strawberry puree. Bake for 1 hour and 15 minutes or until center is set. Turn off the oven and let cheesecake cool in the oven for 30 minutes. Remove from oven and let cool to room temperature. Chill in the refrigerator for at least 4 hours before serving.",
-        image: "https://via.placeholder.com/300x200?text=Strawberry+Cheesecake",
+        image: image05,
       },
     ],
   },
@@ -55,10 +66,10 @@ const data = [
     id: 2,
     name: "Drinks",
     description: "there is so many dessert recipes",
-    image: "https://via.placeholder.com/365",
+    image: image02,
     items: [
       {
-        image: "https://example.com/image1.jpg",
+        image: image06,
         id: 1,
         category: "Drinks",
         timeForDone: "10 minutes",
@@ -69,7 +80,7 @@ const data = [
         name: "Lemonade with Mint",
       },
       {
-        image: "https://example.com/image2.jpg",
+        image: image06,
         id: 2,
         category: "Drinks",
         timeForDone: "5 minutes",
@@ -85,10 +96,10 @@ const data = [
     id: 3,
     name: "Main Dishs",
     description: "there is so many dessert recipes",
-    image: "https://via.placeholder.com/365",
+    image: image03,
     items: [
       {
-        image: "path/to/image",
+        image: image07,
         id: 1,
         category: "Main Dishs",
         timeForDone: "45 minutes",
@@ -105,7 +116,7 @@ const data = [
         name: "Creamy Parmesan Pasta",
       },
       {
-        image: "path/to/image",
+        image: image08,
         id: 2,
         category: "Main Dishs",
         timeForDone: "1 hour",
@@ -128,10 +139,10 @@ const data = [
     id: 4,
     name: "Side Dishs",
     description: "there is so many dessert recipes",
-    image: "https://via.placeholder.com/365",
+    image: image04,
     items: [
       {
-        image: "https://example.com/image1.jpg",
+        image: image09,
         id: 1,
         category: "Side Dishs",
         timeForDone: "30 minutes",
@@ -142,7 +153,7 @@ const data = [
         name: "Roasted Vegetables",
       },
       {
-        image: "https://example.com/image2.jpg",
+        image: image10,
         id: 2,
         category: "Side Dishs",
         timeForDone: "20 minutes",
