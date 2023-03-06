@@ -1,8 +1,8 @@
 import "./Hero.scss";
-import image from "../Hero/burger-img.png";
-import PageTitle from "../PageTitle/PageTitle";
-import PageText from "../PageText/PageText";
-import Button from "../../../components/Button/Button";
+import image from "../../img/burger-img.png";
+import Title from "../Title/Title";
+import PageText from "../../Pages/Page/PageText/PageText";
+import Button from "../Button/Button";
 
 function Hero() {
   return (
@@ -10,7 +10,7 @@ function Hero() {
       <div className="container-less">
         <div className="hero">
           <div className="hero__item">
-            <PageTitle className="hero__title">Yummy Recipes</PageTitle>
+            <Title className="hero__title">Yummy Recipes</Title>
             <PageText className="hero__text">
               we have a lot of yummy recipes from all aruond the world.
             </PageText>

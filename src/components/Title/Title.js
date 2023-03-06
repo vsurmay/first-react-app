@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const PageTitle = styled.h3`
+const Title = styled.h3`
   font-family: "Poppins", sans-serif;
   font-weight: ${(props) => (props.less ? "400" : "700")};
   font-size: ${(props) => (props.less ? "24px" : "32px")};
@@ -9,4 +9,4 @@ const PageTitle = styled.h3`
   text-align: ${(props) => (props.center ? "center" : "left")};
 `;
 
-export default PageTitle;
+export default Title;

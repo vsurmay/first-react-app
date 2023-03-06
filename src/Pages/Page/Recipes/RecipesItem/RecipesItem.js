@@ -1,4 +1,4 @@
-import PageTitle from "../../PageTitle/PageTitle";
+import PageTitle from "../../../../components/Title/Title";
 import PageText from "../../PageText/PageText";
 import "./RecipesItem.scss";
 
