@@ -1,4 +1,4 @@
-import HeaderItem from "../HeaderItem/HeaderItem";
+import HeaderItem from "../../UI/NavItem/NavItem";
 import HeaderLogo from "../../UI/HeaderLogo/HeaderLogo";
 import "./Header.scss";
 

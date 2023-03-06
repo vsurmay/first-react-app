@@ -1,6 +1,6 @@
-import "./HeaderItem.scss";
+import "./NavItem.scss";
 
-function HeaderItem(props) {
+function NavItem(props) {
   return (
     <li key={props.index}>
       <a className="nav__menu-link" href="!#">
@@ -10,4 +10,4 @@ function HeaderItem(props) {
   );
 }
 
-export default HeaderItem;
+export default NavItem;
