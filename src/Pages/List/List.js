@@ -4,7 +4,6 @@ import ListMain from "./ListMain/ListMain";
 function List() {
   return (
     <div className="list-page">
-      <Header />
       <ListMain />
     </div>
   );

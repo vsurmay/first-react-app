@@ -1,32 +1,18 @@
+import HeaderItem from "../HeaderItem/HeaderItem";
+import HeaderLogo from "../HeaderLogo/HeaderLogo";
 import "./Header.scss";
-import myLogo from "./logo.svg";
 
 function Header() {
+  const menuItems = ["Home", "List", "Streach"];
   return (
     <header className="header">
       <div className="container-less">
         <nav className="nav">
-          <div className="nav__logo">
-            <a href="!#">
-              <img src={myLogo} alt="Decline" />
-            </a>
-          </div>
+          <HeaderLogo />
           <ul className="nav__menu">
-            <li>
-              <a className="nav__menu-link" href="!#">
-                Home
-              </a>
-            </li>
-            <li>
-              <a className="nav__menu-link" href="!#">
-                List
-              </a>
-            </li>
-            <li>
-              <a className="nav__menu-link" href="!#">
-                Streach
-              </a>
-            </li>
+            {menuItems.map((el, index) => (
+              <HeaderItem text={el} index={index} />
+            ))}
           </ul>
         </nav>
       </div>

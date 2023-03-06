@@ -5,7 +5,6 @@ import Recipes from "./Recipes/Recipes";
 function Page() {
   return (
     <div className="page-page">
-      <Header />
       <Hero />
       <Recipes />
     </div>
