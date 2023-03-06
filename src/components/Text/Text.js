@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const PageText = styled.p`
+const Text = styled.p`
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -10,4 +10,4 @@ const PageText = styled.p`
   text-align: ${(props) => (props.center ? "center" : "left")};
 `;
 
-export default PageText;
+export default Text;

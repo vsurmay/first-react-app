@@ -1,6 +1,6 @@
 import PageTitle from "../../../components/Title/Title";
 import RecipesItem from "./RecipesItem/RecipesItem";
-import data from "./data";
+import data from "../../../data";
 import "./Recipes.scss";
 
 function Recipes() {

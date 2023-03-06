@@ -1,7 +1,7 @@
 import "./Hero.scss";
 import image from "../../img/burger-img.png";
 import Title from "../Title/Title";
-import PageText from "../../Pages/Page/PageText/PageText";
+import Text from "../Text/Text";
 import Button from "../Button/Button";
 
 function Hero() {
@@ -11,9 +11,9 @@ function Hero() {
         <div className="hero">
           <div className="hero__item">
             <Title className="hero__title">Yummy Recipes</Title>
-            <PageText className="hero__text">
+            <Text className="hero__text">
               we have a lot of yummy recipes from all aruond the world.
-            </PageText>
+            </Text>
             <Button className="hero__btn">See Recipes</Button>
           </div>
           <div className="hero__item">
