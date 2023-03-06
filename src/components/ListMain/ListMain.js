@@ -4,7 +4,6 @@ import ListItem from "../ListItem/ListItem";
 // тестовий варіант
 import data from "../../data";
 const items = data[0].items;
-console.log(items);
 
 function ListMain() {
   return (
