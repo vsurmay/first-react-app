@@ -1,5 +1,5 @@
-import PageTitle from "../../../../components/Title/Title";
-import PageText from "../../../../components/Text/Text";
+import Title from "../Title/Title";
+import Text from "../Text/Text";
 import "./RecipesItem.scss";
 
 function RecipesItem(props) {
@@ -12,12 +12,12 @@ function RecipesItem(props) {
         alt="image"
       />
       <div className="recipes__item-content">
-        <PageTitle className="recipes__item-title" center less>
+        <Title className="recipes__item-title" center less>
           {props.element.name}
-        </PageTitle>
-        <PageText className="recipes__item-text" center>
+        </Title>
+        <Text className="recipes__item-text" center>
           {props.element.description}
-        </PageText>
+        </Text>
       </div>
     </div>
   );

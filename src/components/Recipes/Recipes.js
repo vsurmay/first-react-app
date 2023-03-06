@@ -1,6 +1,6 @@
-import PageTitle from "../../../components/Title/Title";
-import RecipesItem from "./RecipesItem/RecipesItem";
-import data from "../../../data";
+import Title from "../Title/Title";
+import RecipesItem from "../RecipesItem/RecipesItem";
+import data from "../../data";
 import "./Recipes.scss";
 
 function Recipes() {
@@ -9,7 +9,7 @@ function Recipes() {
     <section className="section__recipes">
       <div className="container">
         <div className="recipes">
-          <PageTitle center>Recipes</PageTitle>
+          <Title center>Recipes</Title>
           <div className="recipes__wrapper">
             {data.map((el) => (
               <RecipesItem key={el.id} element={el} />

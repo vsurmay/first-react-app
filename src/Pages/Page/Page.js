@@ -1,5 +1,5 @@
 import Hero from "../../components/Hero/Hero";
-import Recipes from "./Recipes/Recipes";
+import Recipes from "../../components/Recipes/Recipes";
 
 function Page() {
   return (
