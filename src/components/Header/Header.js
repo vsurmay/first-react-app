@@ -1,5 +1,5 @@
 import HeaderItem from "../HeaderItem/HeaderItem";
-import HeaderLogo from "../HeaderLogo/HeaderLogo";
+import HeaderLogo from "../../UI/HeaderLogo/HeaderLogo";
 import "./Header.scss";
 
 function Header() {

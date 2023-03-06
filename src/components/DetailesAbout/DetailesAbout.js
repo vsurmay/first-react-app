@@ -1,5 +1,5 @@
-import Image from "../Image/Image";
-import Title from "../Title/Title";
+import Image from "../../UI/Image/Image";
+import Title from "../../UI/Title/Title";
 import "./DetailesAbout.scss";
 
 function DetailesAbout(props) {

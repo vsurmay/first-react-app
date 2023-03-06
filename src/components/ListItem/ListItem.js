@@ -1,7 +1,7 @@
-import Button from "../Button/Button";
 import "./ListItem.scss";
-import ListItemLink from "../ListItemLink/ListItemLink";
-import Image from "../Image/Image";
+import Button from "../../UI/Button/Button";
+import ListItemLink from "../../UI/ListItemLink/ListItemLink";
+import Image from "../../UI/Image/Image";
 
 function ListItem(props) {
   return (

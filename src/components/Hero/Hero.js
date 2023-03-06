@@ -1,8 +1,8 @@
 import "./Hero.scss";
 import image from "../../img/burger-img.png";
-import Title from "../Title/Title";
-import Text from "../Text/Text";
-import Button from "../Button/Button";
+import Title from "../../UI/Title/Title";
+import Text from "../../UI/Text/Text";
+import Button from "../../UI/Button/Button";
 
 function Hero() {
   return (

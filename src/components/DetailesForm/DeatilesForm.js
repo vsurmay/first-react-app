@@ -1,7 +1,7 @@
 import "./DeatilesForm.scss";
-import Text from "../Text/Text";
-import DetailesLabel from "../DetailesLabel/DetailesLabel";
-import Button from "../Button/Button";
+import Text from "../../UI/Text/Text";
+import DetailesLabel from "../../UI/Label/Label";
+import Button from "../../UI/Button/Button";
 
 function DeatilesForm(props) {
   return (

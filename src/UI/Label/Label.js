@@ -1,6 +1,6 @@
-import "./DetailesLabel.scss";
+import "./Label.scss";
 
-function DetailesLabel(props) {
+function Label(props) {
   return (
     <label className="detailes__label">
       <span className="detailes__label-text">{props.text}</span>
@@ -9,4 +9,4 @@ function DetailesLabel(props) {
   );
 }
 
-export default DetailesLabel;
+export default Label;

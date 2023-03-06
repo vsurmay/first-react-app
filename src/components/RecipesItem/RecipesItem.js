@@ -1,7 +1,7 @@
 import "./RecipesItem.scss";
-import Title from "../Title/Title";
-import Text from "../Text/Text";
-import Image from "../Image/Image";
+import Title from "../../UI/Title/Title";
+import Text from "../../UI/Text/Text";
+import Image from "../../UI/Image/Image";
 
 function RecipesItem(props) {
   return (

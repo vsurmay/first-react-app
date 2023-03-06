@@ -1,4 +1,4 @@
-import Title from "../Title/Title";
+import Title from "../../UI/Title/Title";
 import RecipesItem from "../RecipesItem/RecipesItem";
 import data from "../../data";
 import "./Recipes.scss";
