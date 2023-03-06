@@ -3,7 +3,6 @@ import Text from "../Text/Text";
 import "./RecipesItem.scss";
 
 function RecipesItem(props) {
-  console.log(props.element);
   return (
     <div className="recipes__item">
       <img
