@@ -35,7 +35,7 @@ function App() {
       <div>deffensePokemon: {deffensePokemon}</div>
       <div>setAttackPower: {attackPower}</div>
       <div>deffencePower: {deffencePower}</div>
-      <div>valueDamage: {valueDamage}</div>
+      <div>valueDamage: {Math.floor(valueDamage)}</div>
     </div>
   );
 }
