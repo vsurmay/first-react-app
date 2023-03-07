@@ -1,0 +1,9 @@
+.container {
+    max-width: 100px;
+    margin: 0 auto;
+}
+
+.pokemon {
+    display: flex;
+    justify-content: space-around;
+}
