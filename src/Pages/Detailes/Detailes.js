@@ -1,5 +1,4 @@
 import "./Detailes.scss";
-import data from "../../data";
 import Image from "../../UI/Image/Image";
 import Title from "../../UI/Title/Title";
 import Label from "../../UI/Label/Label";
@@ -7,6 +6,7 @@ import Text from "../../UI/Text/Text";
 import Button from "../../UI/Button/Button";
 
 // тестовий варіант
+import data from "../../data";
 const item = data[0].items[0];
 
 function Detailes() {
