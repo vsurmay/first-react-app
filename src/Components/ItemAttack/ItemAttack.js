@@ -4,17 +4,16 @@ import Button from "../../UI/Button/Button";
 import Input from "../../UI/Input/Input";
 
 const ItemAttack = (props) => {
-  console.log(pokemons);
   return (
     <div className="pokemon__item">
       <ul className="list">
         {pokemons.map((el, index) => (
           <li key={index} className="list__item">
-            <Button name={el} />
+            <Button onClick={() => props.setAttackPokemon(el)}>{el}</Button>
           </li>
         ))}
       </ul>
-      <Input />
+      <Input setPower={props.setAttackPower} />
     </div>
   );
 };
