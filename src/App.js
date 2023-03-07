@@ -1,17 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.scss";
-import Header from "./components/Header/Header";
-import Detailes from "./pages/Detailes/Detailes";
-import List from "./pages/List/List";
-import Page from "./pages/Page/Page";
+import Detailes from "./Pages/Detailes/Detailes";
+import List from "./Pages/List/List";
+
+// встановлюємо дефолтне значення для пропса у Detailes
+import data from "./data";
+const defaultItem = data[0].items[1];
 
 function App() {
+  const [dataItem, setDataItem] = useState(defaultItem);
+  // console.log(dataItem);
+
   return (
     <div>
-      <Header />
-      {/* <Page /> */}
-      <List />
-      {/* <Detailes /> */}
+      <List dataItem={dataItem} setDataItem={setDataItem} />
+      <Detailes item={dataItem} />
     </div>
   );
 }

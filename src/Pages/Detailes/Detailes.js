@@ -6,10 +6,12 @@ import Text from "../../UI/Text/Text";
 import Button from "../../UI/Button/Button";
 
 // тестовий варіант
-import data from "../../data";
-const item = data[0].items[0];
+// import data from "../../data";
+// const item = data[0].items[0];
 
-function Detailes() {
+function Detailes(props) {
+  console.log(props);
+  const item = { ...props.item };
   return (
     <div className="detailes-page">
       <div className="section__detailes">
