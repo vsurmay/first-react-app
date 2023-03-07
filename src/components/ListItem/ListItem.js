@@ -6,7 +6,7 @@ import Image from "../../UI/Image/Image";
 function ListItem(props) {
   // оприділяємо по якій кнопці кікнули та надсилаєм дані на верх
   function sendData() {
-    props.setValue(props.data);
+    props.setDataItem(props.data);
   }
 
   return (
@@ -17,7 +17,7 @@ function ListItem(props) {
         <ListItemLink />
         <ListItemLink />
       </div>
-      <Button onClick={sendData} list>
+      <Button onClick={sendData} listItem>
         Show details
       </Button>
     </div>

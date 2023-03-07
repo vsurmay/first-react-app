@@ -1,19 +1,23 @@
-import React, { useState } from "react";
 import "./App.scss";
+import React, { useState } from "react";
 import Detailes from "./Pages/Detailes/Detailes";
 import List from "./Pages/List/List";
-
-// встановлюємо дефолтне значення для пропса у Detailes
 import data from "./data";
-const defaultItem = data[0].items[1];
 
 function App() {
+  const defaultItem = data[0].items[1];
+
   const [dataItem, setDataItem] = useState(defaultItem);
-  // console.log(dataItem);
+
+  // create new array which consist only dish item
+  const newData = [];
+  const dataItemsArray = data.map((el) =>
+    el.items.forEach((el) => newData.push(el))
+  );
 
   return (
     <div>
-      <List dataItem={dataItem} setDataItem={setDataItem} />
+      <List data={newData} setDataItem={setDataItem} />
       <Detailes item={dataItem} />
     </div>
   );
