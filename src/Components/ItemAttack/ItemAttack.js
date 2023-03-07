@@ -6,6 +6,9 @@ import Input from "../../UI/Input/Input";
 const ItemAttack = (props) => {
   return (
     <div className="pokemon__item">
+      <p>
+        Your choose: <span>{props.attackPokemon}</span>
+      </p>
       <ul className="list">
         {pokemons.map((el, index) => (
           <li key={index} className="list__item">
@@ -13,7 +16,7 @@ const ItemAttack = (props) => {
           </li>
         ))}
       </ul>
-      <Input power={props.attackPower} setPower={props.setAttackPower} />
+      <Input attack power={props.attackPower} setPower={props.setAttackPower} />
     </div>
   );
 };

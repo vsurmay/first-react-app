@@ -5,10 +5,10 @@ import damage from "./damage";
 import { useState } from "react";
 
 function App() {
-  const [attackPokemon, setAttackPokemon] = useState("");
-  const [deffensePokemon, setDeffensePokemon] = useState("");
-  const [attackPower, setAttackPower] = useState("");
-  const [deffencePower, setDeffencePower] = useState("");
+  const [attackPokemon, setAttackPokemon] = useState("fire");
+  const [deffensePokemon, setDeffensePokemon] = useState("fire");
+  const [attackPower, setAttackPower] = useState(1);
+  const [deffencePower, setDeffencePower] = useState(1);
 
   const valueDamage = damage(
     attackPokemon,
@@ -22,20 +22,20 @@ function App() {
       <div className="pokemon">
         <ItemAttack
           setAttackPokemon={setAttackPokemon}
+          attackPokemon={attackPokemon}
           setAttackPower={setAttackPower}
           attackPower={attackPower}
         />
         <ItemDeffence
           setDeffensePokemon={setDeffensePokemon}
           setDeffencePower={setDeffencePower}
+          deffensePokemon={deffensePokemon}
           deffencePower={deffencePower}
         />
       </div>
-      <div>attackPokemon: {attackPokemon}</div>
-      <div>deffensePokemon: {deffensePokemon}</div>
-      <div>setAttackPower: {attackPower}</div>
-      <div>deffencePower: {deffencePower}</div>
-      <div>valueDamage: {Math.floor(valueDamage)}</div>
+      <div className="pokemon__damage">
+        Value damage:{Math.floor(valueDamage)}
+      </div>
     </div>
   );
 }

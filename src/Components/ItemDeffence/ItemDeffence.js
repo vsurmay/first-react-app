@@ -1,4 +1,4 @@
-import "./ItemDeffence.scss";
+import "../ItemAttack/ItemAttack.scss";
 import { pokemons } from "../../data-pokemon";
 import Button from "../../UI/Button/Button";
 import Input from "../../UI/Input/Input";
@@ -6,6 +6,9 @@ import Input from "../../UI/Input/Input";
 const ItemDeffence = (props) => {
   return (
     <div className="pokemon__item">
+      <p>
+        Your choose: <span>{props.deffensePokemon}</span>
+      </p>
       <ul className="list">
         {pokemons.map((el, index) => (
           <li key={index} className="list__item">
@@ -13,7 +16,11 @@ const ItemDeffence = (props) => {
           </li>
         ))}
       </ul>
-      <Input power={props.deffencePower} setPower={props.setDeffencePower} />
+      <Input
+        deffence
+        power={props.deffencePower}
+        setPower={props.setDeffencePower}
+      />
     </div>
   );
 };

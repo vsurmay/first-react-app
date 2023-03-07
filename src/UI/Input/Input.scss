@@ -7,4 +7,9 @@
     color: rgb(67, 67, 67);
     transition: all 0.5s;
     cursor: pointer;
+
+    &__text {
+        font-size: 20px;
+        padding-bottom: 10px;
+    }
 }
