@@ -3,6 +3,7 @@ import ItemAttack from "./Components/ItemAttack/ItemAttack";
 import ItemDeffence from "./Components/ItemDeffence/ItemDeffence";
 import damage from "./damage";
 import { useState } from "react";
+import Button from "./UI/Button/Button";
 
 function App() {
   const [attackPokemon, setAttackPokemon] = useState("fire");
@@ -10,12 +11,7 @@ function App() {
   const [attackPower, setAttackPower] = useState(1);
   const [deffencePower, setDeffencePower] = useState(1);
 
-  const valueDamage = damage(
-    attackPokemon,
-    deffensePokemon,
-    attackPower,
-    deffencePower
-  );
+  const [valueDamage, setValueDamage] = useState("Plese, choose options");
 
   return (
     <div className="container">
@@ -34,7 +30,22 @@ function App() {
         />
       </div>
       <div className="pokemon__damage">
-        Value damage:{Math.floor(valueDamage)}
+        <Button
+          play
+          onClick={() =>
+            setValueDamage(
+              damage(attackPokemon, deffensePokemon, attackPower, deffencePower)
+            )
+          }
+        >
+          Play
+        </Button>
+        <span>
+          Value damage:
+          {valueDamage
+            ? Math.floor(valueDamage) || valueDamage
+            : " Give corect data, please"}
+        </span>
       </div>
     </div>
   );

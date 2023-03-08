@@ -1,7 +1,6 @@
 import "./Input.scss";
 
 const Input = (props) => {
-  console.log(props.attack);
   return (
     <label>
       <span className="input__text">
@@ -9,8 +8,8 @@ const Input = (props) => {
       </span>
       <input
         onChange={(e) =>
-          e.target.value < 1
-            ? props.setPower(1)
+          e.target.value < 0
+            ? props.setPower("0")
             : props.setPower(e.target.value)
         }
         value={props.power}

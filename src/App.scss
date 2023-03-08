@@ -10,8 +10,10 @@
     justify-content: space-around;
 
     &__damage {
+        display: flex;
+        align-items: center;
+        gap: 40px;
         margin-top: 30px;
-        display: inline-block;
         font-size: 30px;
         text-align: left;
     }

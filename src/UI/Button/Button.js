@@ -3,6 +3,8 @@ import styled from "styled-components";
 const Button = styled.button`
   background-color: ${(props) =>
     props.click ? "rgb(176, 176, 255)" : "white"};
+
+  background-color: ${(props) => (props.play ? "rgb(83 255 74)" : "white")};
   padding: 10px 20px;
   font-size: 20px;
   border: 1px solid rgb(0, 0, 165);
