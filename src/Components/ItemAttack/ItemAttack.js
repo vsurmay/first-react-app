@@ -6,7 +6,6 @@ import React, { useState } from "react";
 
 const ItemAttack = (props) => {
   const [activeButtons, setActiveButtons] = useState(0);
-
   return (
     <div className="pokemon__item">
       <ul className="list">
