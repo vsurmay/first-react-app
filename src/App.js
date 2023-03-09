@@ -18,18 +18,22 @@ function App() {
       <div className="pokemon">
         <ItemAttack
           setAttackPokemon={setAttackPokemon}
-          attackPokemon={attackPokemon}
           setAttackPower={setAttackPower}
           attackPower={attackPower}
         />
         <ItemDeffence
           setDeffensePokemon={setDeffensePokemon}
           setDeffencePower={setDeffencePower}
-          deffensePokemon={deffensePokemon}
           deffencePower={deffencePower}
         />
       </div>
       <div className="pokemon__damage">
+        <span>
+          Value damage:{" "}
+          {valueDamage
+            ? Math.floor(valueDamage) || valueDamage
+            : " Give corect data, please"}
+        </span>
         <Button
           play
           onClick={() =>
@@ -40,12 +44,6 @@ function App() {
         >
           Play
         </Button>
-        <span>
-          Value damage:
-          {valueDamage
-            ? Math.floor(valueDamage) || valueDamage
-            : " Give corect data, please"}
-        </span>
       </div>
     </div>
   );

@@ -2,17 +2,26 @@ import "../ItemAttack/ItemAttack.scss";
 import { pokemons } from "../../data-pokemon";
 import Button from "../../UI/Button/Button";
 import Input from "../../UI/Input/Input";
+import { useState } from "react";
 
 const ItemDeffence = (props) => {
+  const [activeButton, setActiveButton] = useState(0);
+
   return (
     <div className="pokemon__item">
-      <p>
-        Your choose: <span>{props.deffensePokemon}</span>
-      </p>
       <ul className="list">
+        <span className="list__text">Type: </span>
         {pokemons.map((el, index) => (
           <li key={index} className="list__item">
-            <Button onClick={() => props.setDeffensePokemon(el)}>{el}</Button>
+            <Button
+              className={activeButton === index ? "active" : ""}
+              onClick={() => {
+                props.setDeffensePokemon(el);
+                setActiveButton(index);
+              }}
+            >
+              {el}
+            </Button>
           </li>
         ))}
       </ul>

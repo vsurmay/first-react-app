@@ -1,19 +1,20 @@
 .container {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 .pokemon {
     margin-top: 100px;
     display: flex;
-    gap: 300px;
-    justify-content: space-around;
+    gap: 0;
+    justify-content: space-between;
 
     &__damage {
         display: flex;
+        flex-direction: column;
         align-items: center;
         gap: 40px;
-        margin-top: 30px;
+        margin-top: 100px;
         font-size: 30px;
         text-align: left;
     }

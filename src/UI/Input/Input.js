@@ -2,9 +2,9 @@ import "./Input.scss";
 
 const Input = (props) => {
   return (
-    <label>
+    <label className="label">
       <span className="input__text">
-        {props.attack ? "Attack power" : "Deffence power"}
+        {props.attack ? "Attack" : "Deffence"}
       </span>
       <input
         onChange={(e) =>
