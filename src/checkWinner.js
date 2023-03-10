@@ -33,4 +33,12 @@ function checkWinner(board) {
   return null;
 }
 
+const result = checkWinner([
+  ["X", "", "O"],
+  ["X", "O", ""],
+  ["O", "", "X"],
+]);
+
+console.log(result);
+
 export default checkWinner;
