@@ -5,6 +5,8 @@ import Button from "../../ui/Button";
 
 const Task = (props) => {
   const [complete, setComplete] = useState(props.info.complete);
+  console.log(props);
+  console.log(complete);
 
   return (
     <li className="task">
@@ -12,7 +14,6 @@ const Task = (props) => {
       <p className={complete ? "task__text active" : "task__text"}>
         {props.info.text}
       </p>
-
       <Button className="task__delete" deleteBtn>
         <svg
           className="delete-icon"

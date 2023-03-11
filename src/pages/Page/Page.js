@@ -27,7 +27,7 @@ const Page = () => {
             setTodos={setTodos}
             todos={todos}
           />
-          <About />
+          <About todos={todos} />
           {todos.length ? (
             <ul className="todos__list">
               {todos.map((el, index) => (
