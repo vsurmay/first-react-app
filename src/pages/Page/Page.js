@@ -12,8 +12,6 @@ const Page = () => {
   const [todos, setTodos] = useState([]);
   const [inputValue, setInputValue] = useState("");
 
-  console.log(todos);
-
   return (
     <div className="page">
       <div className="page__header">
@@ -33,7 +31,7 @@ const Page = () => {
           {todos.length ? (
             <ul className="todos__list">
               {todos.map((el, index) => (
-                <Task key={index} text={el.text} />
+                <Task key={index} info={el} />
               ))}
             </ul>
           ) : (

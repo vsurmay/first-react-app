@@ -4,9 +4,11 @@ $secondlyTextColor: #808080;
 $primaryColor: #1E6F9F;
 $primaryColorLigth: #4EA8DE;
 $secondlyColor: #8284FA;
+$danger: #E25858;
 
 :export {
     primaryColor: $primaryColor;
     mainTextColor: $mainTextColor;
     secondlyTextColor: $secondlyTextColor;
+    danger: $danger;
 }

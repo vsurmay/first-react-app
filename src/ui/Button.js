@@ -5,16 +5,23 @@ const Button = styled.button`
   display: flex;
   flex-wrap: nowrap;
   gap: 8px;
-  background: ${variables.primaryColor};
+  background: ${(props) =>
+    props.deleteBtn ? "inherit" : variables.primaryColor};
   border-radius: 8px;
-  padding: 16px;
+  padding: ${(props) => (props.deleteBtn ? "8px" : "16px")};
   font-size: 16px;
   font-weight: 700;
   color: ${variables.mainTextColor};
   transition: all 0.3s ease;
 
   &:hover {
-    background: #4ea8de;
+    background: ${(props) => (props.deleteBtn ? "#333333" : "#4ea8de")};
+
+    .delete-icon {
+      path {
+        fill: ${variables.danger};
+      }
+    }
   }
 
   .button__img {

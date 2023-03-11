@@ -1,0 +1,22 @@
+.checkbox {
+    cursor: pointer;
+    display: inline-block;
+
+    &:hover {
+        .checkbox__confirm {
+            path:not(:last-child) {
+                fill: #8284FA;
+                transition: all 0.4s ease;
+            }
+        }
+
+        .checkbox__disabled {
+            path {
+                fill: #1E6F9F;
+                transition: all 0.4s ease;
+            }
+        }
+
+    }
+
+}
