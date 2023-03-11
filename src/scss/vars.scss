@@ -1,4 +1,12 @@
 $fontMain: 'Inter', sans-serif;
 $mainTextColor: #F2F2F2;
+$secondlyTextColor: #808080;
 $primaryColor: #1E6F9F;
-$secondlyVolor: #8284FA;
+$primaryColorLigth: #4EA8DE;
+$secondlyColor: #8284FA;
+
+:export {
+    primaryColor: $primaryColor;
+    mainTextColor: $mainTextColor;
+    secondlyTextColor: $secondlyTextColor;
+}

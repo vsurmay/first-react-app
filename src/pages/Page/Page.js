@@ -3,6 +3,7 @@ import React from "react";
 import Logo from "../../components/Logo/Logo";
 import logo from "../../icon/logo.svg";
 import Form from "../../components/Form/Form";
+import About from "../../components/About/About";
 
 const Page = () => {
   return (
@@ -15,6 +16,7 @@ const Page = () => {
       <div className="page__main">
         <div className="container">
           <Form />
+          <About />
         </div>
       </div>
     </div>
