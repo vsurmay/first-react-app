@@ -9,8 +9,11 @@ const Task = (props) => {
   return (
     <li className="task">
       <Checkbox complete={complete} setComplete={setComplete} />
-      <p className="task__text">{props.info.text}</p>
-      <Button deleteBtn>
+      <p className={complete ? "task__text active" : "task__text"}>
+        {props.info.text}
+      </p>
+
+      <Button className="task__delete" deleteBtn>
         <svg
           className="delete-icon"
           width="13"

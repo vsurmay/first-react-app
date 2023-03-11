@@ -6,4 +6,11 @@
         background-color: #000;
         padding: 80px 0;
     }
+
+    .todos__list {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
 }

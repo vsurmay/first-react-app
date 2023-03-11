@@ -1,0 +1,29 @@
+@import '../../scss/vars.scss';
+
+.task {
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    background: #262626;
+    border: 1px solid #333333;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+
+    &__checkbox {
+        margin-top: 5px;
+    }
+
+    &__text {
+        margin-left: 15px;
+        color: $mainTextColor;
+
+        &.active {
+            color: $secondlyTextColor;
+            text-decoration: line-through;
+        }
+    }
+
+    &__delete {
+        margin-left: auto;
+    }
+}
