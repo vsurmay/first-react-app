@@ -1,8 +1,9 @@
 import "./scss/vars.scss";
 import "./App.scss";
+import Page from "./pages/Page/Page";
 
 function App() {
-  return <p className="hey">hey</p>;
+  return <Page />;
 }
 
 export default App;

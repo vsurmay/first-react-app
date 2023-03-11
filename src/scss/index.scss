@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import './vars.scss';
+
+body {
+    font-family: $fontMain;
+    color: $mainTextColor;
+    line-height: 140%;
+    font-size: 14px;
+}
+
+.container {
+    max-width: 740px;
+    margin: 0 auto;
+}
