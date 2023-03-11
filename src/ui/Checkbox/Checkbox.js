@@ -5,7 +5,10 @@ const Checkbox = (props) => {
   return (
     <div
       className="checkbox"
-      onClick={() => props.setComplete(!props.complete)}
+      onClick={() => {
+        props.setComplete(!props.complete);
+        props.info.complete = !props.info.complete;
+      }}
     >
       {props.complete ? (
         <svg

@@ -4,13 +4,17 @@ import Checkbox from "../../ui/Checkbox/Checkbox";
 import Button from "../../ui/Button";
 
 const Task = (props) => {
-  const [complete, setComplete] = useState(props.info.complete);
-  console.log(props);
-  console.log(complete);
+  const [complete, setComplete] = useState(false);
 
   return (
     <li className="task">
-      <Checkbox complete={complete} setComplete={setComplete} />
+      <Checkbox
+        setTodos={props.setTodos}
+        todos={props.todos}
+        info={props.info}
+        complete={complete}
+        setComplete={setComplete}
+      />
       <p className={complete ? "task__text active" : "task__text"}>
         {props.info.text}
       </p>

@@ -12,6 +12,9 @@ const Page = () => {
   const [todos, setTodos] = useState([]);
   const [inputValue, setInputValue] = useState("");
 
+  const descriptionTitle = "У вас ще немає зареєстрованих завдань";
+  const descriptionSubTitle = "Створюйте завдання та впорядковуйте свої справи";
+
   return (
     <div className="page">
       <div className="page__header">
@@ -28,17 +31,18 @@ const Page = () => {
             todos={todos}
           />
           <About todos={todos} />
+
           {todos.length ? (
             <ul className="todos__list">
               {todos.map((el, index) => (
-                <Task key={index} info={el} />
+                <Task key={index} info={el} setTodos={setTodos} todos={todos} />
               ))}
             </ul>
           ) : (
             <Description
               imgUrl={descriptionIcon}
-              title="У вас ще немає зареєстрованих завдань"
-              subTitle="Створюйте завдання та впорядковуйте свої справи"
+              title={descriptionTitle}
+              subTitle={descriptionSubTitle}
             />
           )}
         </div>
