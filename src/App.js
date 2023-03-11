@@ -1,7 +1,8 @@
-import "./App.css";
+import "./scss/vars.scss";
+import "./App.scss";
 
 function App() {
-  return;
+  return <p className="hey">hey</p>;
 }
 
 export default App;
