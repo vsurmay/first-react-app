@@ -6,6 +6,10 @@ import Button from "../../ui/Button";
 const Task = (props) => {
   const [complete, setComplete] = useState(false);
 
+  const removeTask = () => {
+    props.setTodos(props.todos.filter((el) => el.id !== props.info.id));
+  };
+
   return (
     <li className="task">
       <Checkbox
@@ -18,7 +22,7 @@ const Task = (props) => {
       <p className={complete ? "task__text active" : "task__text"}>
         {props.info.text}
       </p>
-      <Button className="task__delete" deleteBtn>
+      <Button onClick={removeTask} className="task__delete" deleteBtn>
         <svg
           className="delete-icon"
           width="13"
