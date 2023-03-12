@@ -11,6 +11,7 @@ import descriptionIcon from "../../icon/description.svg";
 const Page = () => {
   const [todos, setTodos] = useState([]);
   const [inputValue, setInputValue] = useState("");
+  const [checkedTask, setCheckedTask] = useState(0);
 
   const descriptionTitle = "У вас ще немає зареєстрованих завдань";
   const descriptionSubTitle = "Створюйте завдання та впорядковуйте свої справи";
@@ -30,12 +31,18 @@ const Page = () => {
             setTodos={setTodos}
             todos={todos}
           />
-          <About todos={todos} />
+          <About todos={todos} checkedTask={checkedTask} />
 
           {todos.length ? (
             <ul className="todos__list">
               {todos.map((el, index) => (
-                <Task key={index} info={el} setTodos={setTodos} todos={todos} />
+                <Task
+                  key={index}
+                  info={el}
+                  setTodos={setTodos}
+                  todos={todos}
+                  setCheckedTask={setCheckedTask}
+                />
               ))}
             </ul>
           ) : (

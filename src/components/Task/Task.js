@@ -6,14 +6,21 @@ import Button from "../../ui/Button";
 const Task = (props) => {
   const [complete, setComplete] = useState(false);
 
+  const valueCheckedTask = (tasks) => {
+    return tasks.filter((el) => el.complete).length;
+  };
+
   const removeTask = () => {
     props.setTodos(props.todos.filter((el) => el.id !== props.info.id));
+    console.log(props.todos);
+    props.setCheckedTask(valueCheckedTask(props.todos));
   };
 
   return (
     <li className="task">
       <Checkbox
-        setTodos={props.setTodos}
+        valueCheckedTask={valueCheckedTask}
+        setCheckedTask={props.setCheckedTask}
         todos={props.todos}
         info={props.info}
         complete={complete}
