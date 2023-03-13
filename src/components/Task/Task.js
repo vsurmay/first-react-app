@@ -9,8 +9,14 @@ const Task = (props) => {
   };
 
   const removeTask = () => {
-    props.setTodos(props.todos.filter((el) => el.id !== props.info.id));
-    props.setCheckedTask(valueCheckedTask(props.todos) - 1);
+    console.log(props.info);
+    if (props.info.complete) {
+      props.setTodos(props.todos.filter((el) => el.id !== props.info.id));
+      props.setCheckedTask(valueCheckedTask(props.todos) - 1);
+    } else {
+      props.setTodos(props.todos.filter((el) => el.id !== props.info.id));
+      props.setCheckedTask(valueCheckedTask(props.todos));
+    }
   };
 
   return (
