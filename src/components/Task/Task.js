@@ -1,5 +1,5 @@
+import React, { useState } from "react";
 import "./Task.scss";
-import React from "react";
 import Checkbox from "../../ui/Checkbox/Checkbox";
 import Button from "../../ui/Button";
 
