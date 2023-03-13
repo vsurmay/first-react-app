@@ -1,4 +1,4 @@
-import "./ItemAttack.scss";
+import "./Item.scss";
 import { pokemons } from "../../data-pokemon";
 import Button from "../../UI/Button/Button";
 import Input from "../../UI/Input/Input";
@@ -16,7 +16,7 @@ const ItemAttack = (props) => {
             <Button
               className={activeButtons === index ? "active" : ""}
               onClick={() => {
-                props.setAttackPokemon(el);
+                props.setPokemon(el);
                 setActiveButtons(index);
               }}
             >
@@ -25,7 +25,7 @@ const ItemAttack = (props) => {
           </li>
         ))}
       </ul>
-      <Input attack power={props.attackPower} setPower={props.setAttackPower} />
+      <Input attack power={props.power} setPower={props.setPower} />
     </div>
   );
 };

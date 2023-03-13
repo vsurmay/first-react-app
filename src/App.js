@@ -1,6 +1,5 @@
 import "./App.scss";
-import ItemAttack from "./Components/ItemAttack/ItemAttack";
-import ItemDeffence from "./Components/ItemDeffence/ItemDeffence";
+import Item from "./Components/Item/Item";
 import damage from "./damage";
 import { useState } from "react";
 import Button from "./UI/Button/Button";
@@ -16,15 +15,15 @@ function App() {
   return (
     <div className="container">
       <div className="pokemon">
-        <ItemAttack
-          setAttackPokemon={setAttackPokemon}
-          setAttackPower={setAttackPower}
-          attackPower={attackPower}
+        <Item
+          setPokemon={setAttackPokemon}
+          setPower={setAttackPower}
+          power={attackPower}
         />
-        <ItemDeffence
-          setDeffensePokemon={setDeffensePokemon}
-          setDeffencePower={setDeffencePower}
-          deffencePower={deffencePower}
+        <Item
+          setPokemon={setDeffensePokemon}
+          setPower={setDeffencePower}
+          power={deffencePower}
         />
       </div>
       <div className="pokemon__damage">
