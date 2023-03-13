@@ -3,14 +3,13 @@ import "./Checkbox.scss";
 
 const Checkbox = (props) => {
   const handleClick = () => {
-    props.setComplete(!props.complete);
     props.info.complete = !props.info.complete;
     props.setCheckedTask(props.valueCheckedTask(props.todos));
   };
 
   return (
     <div className="checkbox" onClick={handleClick}>
-      {props.complete ? (
+      {props.info.complete ? (
         <svg
           className="checkbox__confirm"
           width="18"

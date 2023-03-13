@@ -1,18 +1,15 @@
-import React, { useState } from "react";
 import "./Task.scss";
+import React from "react";
 import Checkbox from "../../ui/Checkbox/Checkbox";
 import Button from "../../ui/Button";
 
 const Task = (props) => {
-  const [complete, setComplete] = useState(false);
-
   const valueCheckedTask = (tasks) => {
     return tasks.filter((el) => el.complete).length;
   };
 
   const removeTask = () => {
     props.setTodos(props.todos.filter((el) => el.id !== props.info.id));
-    console.log(props.todos);
     props.setCheckedTask(valueCheckedTask(props.todos) - 1);
   };
 
@@ -23,10 +20,8 @@ const Task = (props) => {
         setCheckedTask={props.setCheckedTask}
         todos={props.todos}
         info={props.info}
-        complete={complete}
-        setComplete={setComplete}
       />
-      <p className={complete ? "task__text active" : "task__text"}>
+      <p className={props.info.complete ? "task__text active" : "task__text"}>
         {props.info.text}
       </p>
       <Button onClick={removeTask} className="task__delete" deleteBtn>
