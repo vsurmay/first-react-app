@@ -19,6 +19,7 @@ function App() {
           setPokemon={setAttackPokemon}
           setPower={setAttackPower}
           power={attackPower}
+          attack={true}
         />
         <Item
           setPokemon={setDeffensePokemon}

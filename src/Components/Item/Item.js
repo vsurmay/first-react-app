@@ -25,7 +25,11 @@ const ItemAttack = (props) => {
           </li>
         ))}
       </ul>
-      <Input attack power={props.power} setPower={props.setPower} />
+      <Input
+        attack={props.attack ? true : false}
+        power={props.power}
+        setPower={props.setPower}
+      />
     </div>
   );
 };
