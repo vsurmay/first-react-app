@@ -13,7 +13,7 @@ const Task = (props) => {
   const removeTask = () => {
     props.setTodos(props.todos.filter((el) => el.id !== props.info.id));
     console.log(props.todos);
-    props.setCheckedTask(valueCheckedTask(props.todos));
+    props.setCheckedTask(valueCheckedTask(props.todos) - 1);
   };
 
   return (
