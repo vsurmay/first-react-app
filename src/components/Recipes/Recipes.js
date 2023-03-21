@@ -1,9 +1,18 @@
 import Title from "../../UI/Title/Title";
 import RecipesItem from "../RecipesItem/RecipesItem";
-import data from "../../data";
+import axios from "axios";
+// import data from "../../data";
 import "./Recipes.scss";
+import { useEffect, useState } from "react";
 
 function Recipes() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:3004/recipes/")
+      .then((res) => setData(res.data));
+  }, []);
   console.log(data);
   return (
     <section className="section__recipes">
