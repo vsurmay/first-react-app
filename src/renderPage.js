@@ -2,17 +2,18 @@ import Detailes from "./Pages/Detailes/Detailes";
 import List from "./Pages/List/List";
 import Page from "./Pages/Page/Page";
 
-function renderPage(curentPage, data) {
-  switch (curentPage) {
+function renderPage(curentPage) {
+  console.log(curentPage);
+  switch (curentPage.page) {
     case "Home":
-      return <Page data={data} />;
+      return <Page data={curentPage.data} />;
     case "List":
-      return <List data={data} />;
+      return <List data={curentPage.data} />;
     case "Streach":
       return <Detailes />;
 
     default:
-      return <Page />;
+      return <Page data={curentPage.data} />;
   }
 }
 

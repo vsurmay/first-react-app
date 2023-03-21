@@ -7,14 +7,17 @@ import axios from "axios";
 
 function App() {
   const [data, setData] = useState([]);
+  const [currentPage, setCurrentPage] = useState({ page: "Home", data: data });
 
   useEffect(() => {
-    axios
-      .get("http://localhost:3004/recipes")
-      .then((response) => setData(response.data));
+    getData();
   }, []);
 
-  const [currentPage, setCurrentPage] = useState("Home");
+  async function getData() {
+    const response = await axios.get("http://localhost:3004/recipes");
+    setData(response.data);
+    setCurrentPage({ page: "Home", data: response.data });
+  }
 
   return (
     <>

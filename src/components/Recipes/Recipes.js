@@ -7,7 +7,6 @@ import "./Recipes.scss";
 
 function Recipes({ data }) {
   // const [data, setData] = useState([]);
-
   // useEffect(() => {
   //   axios
   //     .get("http://localhost:3004/recipes/")
@@ -20,9 +19,9 @@ function Recipes({ data }) {
         <div className="recipes">
           <Title center>Recipes</Title>
           <div className="recipes__wrapper">
-            {data.map((el) => (
-              <RecipesItem key={el.id} element={el} />
-            ))}
+            {data
+              ? data.map((el) => <RecipesItem key={el.id} element={el} />)
+              : ""}
           </div>
         </div>
       </div>

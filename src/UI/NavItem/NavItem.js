@@ -11,7 +11,7 @@ function NavItem({ text }) {
       <a
         onClick={(e) => {
           e.preventDefault();
-          contextData.setCurrentPage(text);
+          contextData.setCurrentPage({ page: text, data: contextData.data });
         }}
         className={
           contextData.currentPage === text

@@ -1,11 +1,11 @@
 import Hero from "../../components/Hero/Hero";
 import Recipes from "../../components/Recipes/Recipes";
 
-function Page({ data }) {
+function Page(props) {
   return (
     <div className="page-page">
       <Hero />
-      <Recipes data={data} />
+      <Recipes data={props.data} />
     </div>
   );
 }

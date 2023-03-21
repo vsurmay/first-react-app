@@ -1,18 +1,28 @@
 import "./RecipesItem.scss";
+import React from "react";
 import Title from "../../UI/Title/Title";
 import Text from "../../UI/Text/Text";
 import Image from "../../UI/Image/Image";
+import ContextCurrentPage from "../../ContextCurrentPage";
 
-function RecipesItem(props) {
+function RecipesItem({ element }) {
+  const currentPage = React.useContext(ContextCurrentPage);
+
   return (
-    <div className="recipes__item">
-      <Image url={props.element.image} alt={props.element.name} />
+    <div
+      onClick={() => {
+        console.log(element);
+        currentPage.setCurrentPage({ page: "List", data: element });
+      }}
+      className="recipes__item"
+    >
+      <Image url={element.image} alt={element.name} />
       <div className="recipes__item-content">
         <Title className="recipes__item-title" center less>
-          {props.element.name}
+          {element.name}
         </Title>
         <Text className="recipes__item-text" center>
-          {props.element.description}
+          {element.description}
         </Text>
       </div>
     </div>

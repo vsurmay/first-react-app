@@ -1,11 +1,8 @@
 import "./List.scss";
 import ListItem from "../../components/ListItem/ListItem";
 
-// // // тестовий варіант
-// import datas from "../../data";
-// const items = datas[2].items;
-
 function List({ data }) {
+  console.log(data);
   const allReceptItem = [];
 
   if (data.length) {

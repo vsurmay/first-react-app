@@ -21,7 +21,10 @@ function Hero() {
             <Button
               onClick={(e) => {
                 e.preventDefault();
-                contextData.setCurrentPage("List", contextData.data);
+                contextData.setCurrentPage({
+                  page: "List",
+                  data: contextData.data,
+                });
               }}
               className="hero__btn"
             >
