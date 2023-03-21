@@ -9,7 +9,12 @@ function renderPage(curentPage) {
     case "List":
       return <List data={curentPage.data} />;
     case "Streach":
-      return <Detailes data={curentPage.data} />;
+      return (
+        <Detailes
+          data={curentPage.data}
+          infoAboutList={curentPage.infoAboutList}
+        />
+      );
 
     default:
       return <Page data={curentPage.data} />;

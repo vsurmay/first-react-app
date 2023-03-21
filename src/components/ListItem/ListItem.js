@@ -6,7 +6,7 @@ import Title from "../../UI/Title/Title";
 import React from "react";
 import ContextCurrentPage from "../../ContextCurrentPage";
 
-function ListItem({ data }) {
+function ListItem({ data, infoAboutList }) {
   const currentPage = React.useContext(ContextCurrentPage);
 
   return (
@@ -22,8 +22,11 @@ function ListItem({ data }) {
       </Title>
       <Button
         onClick={() => {
-          console.log(data);
-          currentPage.setCurrentPage({ page: "Streach", data: data });
+          currentPage.setCurrentPage({
+            page: "Streach",
+            data: data,
+            infoAboutList: infoAboutList,
+          });
         }}
         listButton
       >

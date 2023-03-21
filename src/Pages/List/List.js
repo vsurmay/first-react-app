@@ -14,7 +14,7 @@ function List({ data }) {
         <div className="container-less">
           <div className="list__wrapper">
             {allReceptItem.map((el, index) => (
-              <ListItem key={index} data={el} />
+              <ListItem infoAboutList={data} key={index} data={el} />
             ))}
           </div>
         </div>
