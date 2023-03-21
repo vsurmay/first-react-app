@@ -13,7 +13,7 @@ function Recipes() {
       .get("http://localhost:3004/recipes/")
       .then((res) => setData(res.data));
   }, []);
-  console.log(data);
+
   return (
     <section className="section__recipes">
       <div className="container">
