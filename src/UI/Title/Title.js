@@ -2,6 +2,7 @@ import styled from "styled-components";
 import variables from "../../scss/_vars.scss";
 
 const Title = styled.h3`
+  height: 64px;
   font-family: ${(props) =>
     props.recipe ? variables.fontMain : variables.fontSecondly};
   font-weight: ${(props) => (props.less || props.recipe ? "400" : "700")};

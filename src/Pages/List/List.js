@@ -2,7 +2,6 @@ import "./List.scss";
 import ListItem from "../../components/ListItem/ListItem";
 
 function List({ data }) {
-  console.log(data);
   const allReceptItem = [];
 
   if (data.length) {

@@ -11,8 +11,7 @@ function RecipesItem({ element }) {
   return (
     <div
       onClick={() => {
-        console.log(element);
-        currentPage.setCurrentPage({ page: "List", data: element });
+        currentPage.setCurrentPage({ page: "List", data: [element] });
       }}
       className="recipes__item"
     >

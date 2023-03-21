@@ -7,7 +7,7 @@ import axios from "axios";
 
 function App() {
   const [data, setData] = useState([]);
-  const [currentPage, setCurrentPage] = useState({ page: "Home", data: data });
+  const [currentPage, setCurrentPage] = useState({});
 
   useEffect(() => {
     getData();

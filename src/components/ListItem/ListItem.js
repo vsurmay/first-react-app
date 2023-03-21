@@ -2,17 +2,33 @@ import "./ListItem.scss";
 import Button from "../../UI/Button/Button";
 import ListItemLink from "../../UI/ListItemLink/ListItemLink";
 import Image from "../../UI/Image/Image";
+import Title from "../../UI/Title/Title";
+import React from "react";
+import ContextCurrentPage from "../../ContextCurrentPage";
 
-function ListItem(props) {
+function ListItem({ data }) {
+  const currentPage = React.useContext(ContextCurrentPage);
+
   return (
     <div className="list__item">
-      <Image url={props.data.image} alt={props.data.name} />
+      <Image url={data.image} alt={data.name} />
       <div className="list__item-discription">
         <ListItemLink />
         <ListItemLink />
         <ListItemLink />
       </div>
-      <Button listButton>Show details</Button>
+      <Title center less>
+        {data.name}
+      </Title>
+      <Button
+        onClick={() => {
+          console.log(data);
+          currentPage.setCurrentPage({ page: "Streach", data: data });
+        }}
+        listButton
+      >
+        Show details
+      </Button>
     </div>
   );
 }
