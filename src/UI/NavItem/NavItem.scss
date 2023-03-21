@@ -1,3 +1,6 @@
+@import '../../scss/_vars.scss';
+
+
 .nav__menu-link {
     font-size: 16px;
     line-height: 20px;
@@ -8,5 +11,9 @@
 
     &:hover {
         opacity: 0.6;
+    }
+
+    &.active {
+        color: $primaryColor;
     }
 }

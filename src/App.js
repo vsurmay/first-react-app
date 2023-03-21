@@ -2,14 +2,19 @@ import React, { useState } from "react";
 import "./App.scss";
 import Header from "./components/Header/Header";
 import renderPage from "./renderPage";
+import ContextCurrentPage from "./ContextCurrentPage";
 
 function App() {
-  const [curentPage, setCurentPage] = useState("Home");
+  const [currentPage, setCurrentPage] = useState("Home");
 
   return (
     <>
-      <Header setCurentPage={setCurentPage} />
-      {renderPage(curentPage)}
+      <ContextCurrentPage.Provider
+        value={{ currentPage: currentPage, setCurrentPage: setCurrentPage }}
+      >
+        <Header setCurentPage={setCurrentPage} />
+        {renderPage(currentPage)}
+      </ContextCurrentPage.Provider>
     </>
   );
 }

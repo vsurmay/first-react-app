@@ -1,14 +1,23 @@
+import ContextCurrentPage from "../../ContextCurrentPage";
+import React from "react";
+
 import "./NavItem.scss";
 
-function NavItem({ text, setCurentPage }) {
+function NavItem({ text }) {
+  const contextData = React.useContext(ContextCurrentPage);
+
   return (
     <li>
       <a
         onClick={(e) => {
           e.preventDefault();
-          setCurentPage(text);
+          contextData.setCurrentPage(text);
         }}
-        className="nav__menu-link"
+        className={
+          contextData.currentPage === text
+            ? "nav__menu-link active"
+            : "nav__menu-link"
+        }
       >
         {text}
       </a>
