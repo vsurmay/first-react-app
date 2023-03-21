@@ -14,7 +14,7 @@ function NavItem({ text }) {
           contextData.setCurrentPage({ page: text, data: contextData.data });
         }}
         className={
-          contextData.currentPage === text
+          contextData.currentPage.page === text
             ? "nav__menu-link active"
             : "nav__menu-link"
         }
