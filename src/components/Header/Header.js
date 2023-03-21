@@ -1,8 +1,8 @@
-import HeaderItem from "../../UI/NavItem/NavItem";
+import NavItem from "../../UI/NavItem/NavItem";
 import HeaderLogo from "../../UI/HeaderLogo/HeaderLogo";
 import "./Header.scss";
 
-function Header() {
+function Header({ setCurentPage }) {
   const menuItems = ["Home", "List", "Streach"];
   return (
     <header className="header">
@@ -11,7 +11,7 @@ function Header() {
           <HeaderLogo />
           <ul className="nav__menu">
             {menuItems.map((el, index) => (
-              <HeaderItem text={el} index={index} />
+              <NavItem text={el} setCurentPage={setCurentPage} key={index} />
             ))}
           </ul>
         </nav>

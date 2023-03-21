@@ -1,10 +1,16 @@
 import "./NavItem.scss";
 
-function NavItem(props) {
+function NavItem({ text, setCurentPage }) {
   return (
-    <li key={props.index}>
-      <a className="nav__menu-link" href="!#">
-        {props.text}
+    <li>
+      <a
+        onClick={(e) => {
+          e.preventDefault();
+          setCurentPage(text);
+        }}
+        className="nav__menu-link"
+      >
+        {text}
       </a>
     </li>
   );

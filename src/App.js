@@ -1,18 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.scss";
 import Header from "./components/Header/Header";
-import Detailes from "./pages/Detailes/Detailes";
-import List from "./pages/List/List";
-import Page from "./pages/Page/Page";
+import renderPage from "./renderPage";
 
 function App() {
+  const [curentPage, setCurentPage] = useState("Home");
+
   return (
-    <div>
-      <Header />
-      {/* <Page /> */}
-      <List />
-      {/* <Detailes /> */}
-    </div>
+    <>
+      <Header setCurentPage={setCurentPage} />
+      {renderPage(curentPage)}
+    </>
   );
 }
 
