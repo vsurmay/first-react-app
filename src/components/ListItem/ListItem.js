@@ -12,7 +12,7 @@ function ListItem(props) {
         <ListItemLink />
         <ListItemLink />
       </div>
-      <Button list>Show details</Button>
+      <Button listButton>Show details</Button>
     </div>
   );
 }

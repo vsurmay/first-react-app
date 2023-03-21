@@ -1,10 +1,14 @@
 import "./Hero.scss";
+import React from "react";
+import ContextCurrentPage from "../../ContextCurrentPage";
 import image from "../../img/burger-img.png";
 import Title from "../../UI/Title/Title";
 import Text from "../../UI/Text/Text";
 import Button from "../../UI/Button/Button";
 
 function Hero() {
+  const contextData = React.useContext(ContextCurrentPage);
+
   return (
     <section className="section__hero">
       <div className="container-less">
@@ -14,7 +18,15 @@ function Hero() {
             <Text className="hero__text">
               we have a lot of yummy recipes from all aruond the world.
             </Text>
-            <Button className="hero__btn">See Recipes</Button>
+            <Button
+              onClick={(e) => {
+                e.preventDefault();
+                contextData.setCurrentPage("List", contextData.data);
+              }}
+              className="hero__btn"
+            >
+              See Recipes
+            </Button>
           </div>
           <div className="hero__item">
             <img src={image} alt="burger image" />
