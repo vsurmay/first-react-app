@@ -10,7 +10,27 @@
     justify-content: center;
 
     &__content {
-        max-width: 500px;
+        position: relative;
+        width: 400px;
         background-color: white;
+        padding: 80px;
+
+        .modal__content-cancel {
+
+            position: absolute;
+            top: 20px;
+            right: 20px;
+
+            img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
     }
 }
