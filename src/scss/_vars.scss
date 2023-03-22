@@ -1,0 +1,12 @@
+$fontMain: 'Quando', serif;
+$fontSecondly: 'Poppins', sans-serif;
+$primaryColor: #F8A607;
+
+$secondlyColor: rgba(255, 57, 57, 0.6);
+
+:export {
+    fontMain: $fontMain;
+    fontSecondly: $fontSecondly;
+    primaryColor: $primaryColor;
+    secondlyColor: $secondlyColor;
+}
