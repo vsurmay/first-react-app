@@ -37,7 +37,12 @@ function Detailes({ data, infoAboutList }) {
               </div>
               <form className="detailes__form">
                 {data.ingredients.map((el, index) => (
-                  <Label key={index} text={el} />
+                  <Label
+                    key={index}
+                    text={el}
+                    detailes={true}
+                    type={"checkbox"}
+                  />
                 ))}
                 <Text recipe>{data.recipe}</Text>
                 <Button

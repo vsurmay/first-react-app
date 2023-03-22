@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import "./Modal.scss";
-import { useFormik } from "formik";
 import cancel from "../../img/cancel.svg";
+import ModalForm from "../ModalForm/ModalForm";
 
 const Modal = ({ setShowModal }) => {
   const modalRef = useRef(null);
@@ -9,20 +9,10 @@ const Modal = ({ setShowModal }) => {
 
   useEffect(() => {
     if (modalRef.current) {
-      firstInputForm.current.focus();
+      // console.log(firstInputForm.current);
+      // firstInputForm.current.focus();
     }
   }, []);
-
-  const formik = useFormik({
-    initialValues: {
-      test: "",
-      description: "",
-    },
-
-    onSubmit: (values) => {
-      console.log(values);
-    },
-  });
 
   return (
     <div
@@ -45,15 +35,7 @@ const Modal = ({ setShowModal }) => {
         >
           <img src={cancel} />
         </a>
-        <form onSubmit={formik.handleSubmit}>
-          <input
-            name="test"
-            onChange={formik.handleChange}
-            ref={firstInputForm}
-          />
-          <input name="description" onChange={formik.handleChange} />
-          <button type="submit">Submit</button>
-        </form>
+        <ModalForm firstInputForm={firstInputForm} />
       </div>
     </div>
   );
