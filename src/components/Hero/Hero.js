@@ -4,6 +4,7 @@ import ContextCurrentPage from "../../ContextCurrentPage";
 import Title from "../../UI/Title/Title";
 import Text from "../../UI/Text/Text";
 import Button from "../../UI/Button/Button";
+import image from "../../img/hero.png";
 
 function Hero() {
   const contextData = React.useContext(ContextCurrentPage);
@@ -31,7 +32,7 @@ function Hero() {
             </Button>
           </div>
           <div className="hero__item">
-            {/* <img src={image} alt="burger image" /> */}
+            <img src={image} alt="burger image" />
           </div>
         </div>
       </div>

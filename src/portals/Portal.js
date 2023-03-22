@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { createPortal } from "react-dom";
 
 const Portal = ({ children }) => {
-  const mount = document.getElementById("portal");
+  const mount = document.getElementById("modal");
   const el = document.createElement("div");
   useEffect(() => {
     mount.appendChild(el);

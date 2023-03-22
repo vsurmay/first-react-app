@@ -21,6 +21,7 @@ function Recipes({ data }) {
           <button
             onClick={(e) => {
               e.preventDefault();
+              console.log("yes");
               setShowModal(!showModal);
             }}
           >
