@@ -1,18 +1,23 @@
-import React from "react";
+import "./ModalForm.scss";
+import React, { useState } from "react";
 import { useFormik } from "formik";
 import Label from "../../UI/Label/Label";
 import Button from "../../UI/Button/Button";
 import ContextCurrentPage from "../../ContextCurrentPage";
 import validateForms from "../../validateForm";
 
-const ModalForm = ({ data, setShowModal, modalRecept }) => {
+const ModalForm = ({ currentRecipe, data, setShowModal, modalRecept }) => {
   const contextData = React.useContext(ContextCurrentPage);
+
+  const [ingridients, setIngridients] = useState([]);
+  const [ingridientsInput, setIngridientsInput] = useState("");
+
   const initialValues = modalRecept
     ? {
         name: "",
         timeForDone: "",
         description: "",
-        ingredients: "",
+        // ingredients: "",
         recipe: "",
         image: "",
       }
@@ -28,7 +33,9 @@ const ModalForm = ({ data, setShowModal, modalRecept }) => {
     onSubmit: (values) => {
       setShowModal(false);
       if (modalRecept) {
+        values.ingredients = [...ingridients];
         console.log(values);
+        contextData.changeData(currentRecipe, values);
       } else {
         values.items = [];
         contextData.adedRecept(values);
@@ -38,6 +45,33 @@ const ModalForm = ({ data, setShowModal, modalRecept }) => {
 
   return (
     <form onSubmit={formik.handleSubmit}>
+      {modalRecept ? (
+        <>
+          <label className="modal__label">
+            <span className="modal__label-text">
+              Write ingridients, some items
+            </span>
+            <input
+              className="modal__label-input"
+              value={ingridientsInput}
+              type="text"
+              onChange={(e) => {
+                setIngridientsInput(e.target.value);
+              }}
+            />
+          </label>
+          <Button
+            onClick={(e) => {
+              e.preventDefault();
+              setIngridientsInput("");
+              setIngridients([...ingridients, ingridientsInput]);
+            }}
+            className="modal-recipe-btn"
+          >
+            Add Ingredients Item
+          </Button>
+        </>
+      ) : null}
       {data.map((el, index) => (
         <Label
           errors={formik.errors[el.name]}

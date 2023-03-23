@@ -11,6 +11,8 @@ function App() {
   const [currentPage, setCurrentPage] = useState({});
   const [recepts, dispatch] = useReducer(receptsReducer, []);
 
+  console.log(recepts);
+
   useEffect(() => {
     getData();
   }, []);
@@ -39,11 +41,21 @@ function App() {
     const response = await axios.delete(
       `http://localhost:3004/recipes/${idEl}`
     );
-    console.log(response);
     dispatch({
       type: "delete",
       idDelete: idEl,
     });
+  }
+
+  async function changeData(element, newData) {
+    console.log(element);
+    newData.category = element[0].name;
+    element[0].items.push(newData);
+    const response = await axios.put(
+      `http://localhost:3004/recipes/${element[0].id}`,
+      element[0]
+    );
+    console.log(response.data);
   }
 
   return (
@@ -57,6 +69,7 @@ function App() {
           deleteData: deleteData,
           showModal: showModal,
           setShowModal: setShowModal,
+          changeData: changeData,
         }}
       >
         <Header setCurentPage={setCurrentPage} />

@@ -20,7 +20,11 @@ function List({ data, addButton }) {
       <section className="section__list">
         {context.showModal ? (
           <Portal>
-            <Modal setShowModal={context.setShowModal} modalRecept={true} />
+            <Modal
+              currentRecipe={data}
+              setShowModal={context.setShowModal}
+              modalRecept={true}
+            />
           </Portal>
         ) : null}
         <div className="container-less">

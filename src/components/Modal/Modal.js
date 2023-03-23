@@ -5,7 +5,7 @@ import ModalForm from "../ModalForm/ModalForm";
 import dataFormDish from "../../formDatas/formDataDish";
 import dataFormRecept from "../../formDatas/formDataRecept";
 
-const Modal = ({ setShowModal, modalRecept }) => {
+const Modal = ({ currentRecipe, setShowModal, modalRecept }) => {
   const modalRef = useRef(null);
 
   return (
@@ -30,6 +30,7 @@ const Modal = ({ setShowModal, modalRecept }) => {
           <img src={cancel} />
         </a>
         <ModalForm
+          currentRecipe={currentRecipe}
           setShowModal={setShowModal}
           data={modalRecept ? dataFormRecept : dataFormDish}
           modalRecept={modalRecept}

@@ -167,17 +167,41 @@
       "id": 4
     },
     {
-      "name": "Second Dish",
-      "description": "Potato with hot meat",
+      "name": "asdasd",
+      "description": "asdasdasd",
       "image": "https://robohash.org/1aadaabaabaa",
       "items": [],
       "id": 5
     },
     {
-      "name": "jfsdhfskjv",
-      "description": "lksdfjlksjdflks sdfhslkdjfksl sdkfjskdlf",
+      "name": "asd",
+      "description": "asdasd",
       "image": "https://robohash.org/1aadaabaabaa",
-      "items": [],
+      "items": [
+        {
+          "name": "asdasda",
+          "timeForDone": "asdasdasd",
+          "description": "asdasd",
+          "recipe": "asdasd",
+          "image": "https://robohash.org/1aadaabaabaa",
+          "category": "asd"
+        },
+        {
+          "name": "asdasd",
+          "timeForDone": "dasdasd",
+          "description": "asdasdas",
+          "recipe": "asdasd",
+          "image": "https://robohash.org/1aadaabaabaa",
+          "ingredients": [
+            "asdasdasd",
+            "asdasdasd",
+            "asdasdasd",
+            "asdasdasd",
+            "asdasdasd"
+          ],
+          "category": "asd"
+        }
+      ],
       "id": 6
     }
   ]

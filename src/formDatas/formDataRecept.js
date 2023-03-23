@@ -6,9 +6,9 @@ const dataFormRecept = [
     type: "text",
   },
   { name: "timeForDone", placeholder: "Time for done", type: "text" },
-  { name: "ingredients", placeholder: "Ingredients for dish", type: "text" },
   { name: "recipe", placeholder: "Write recept", type: "text" },
   { name: "image", placeholder: "Enter url image", type: "text" },
+  // { name: "ingredients", placeholder: "Ingredients for dish", type: "text" },
 ];
 
 export default dataFormRecept;
