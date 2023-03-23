@@ -1,6 +1,6 @@
+import "./Recipes.scss";
 import Title from "../../UI/Title/Title";
 import RecipesItem from "../RecipesItem/RecipesItem";
-import "./Recipes.scss";
 import React, { useState } from "react";
 import Modal from "../Modal/Modal";
 import Portal from "../../portals/Portal";
@@ -8,15 +8,15 @@ import Button from "../../UI/Button/Button";
 import ContextCurrentPage from "../../ContextCurrentPage";
 
 function Recipes() {
-  const [showModal, setShowModal] = useState(false);
+  // const [showModal, setShowModal] = useState(false);
 
   const context = React.useContext(ContextCurrentPage);
 
   return (
     <section className="section__recipes">
-      {showModal ? (
+      {context.showModal ? (
         <Portal>
-          <Modal setShowModal={setShowModal} />
+          <Modal setShowModal={context.setShowModal} />
         </Portal>
       ) : null}
       <div className="container">
@@ -25,7 +25,7 @@ function Recipes() {
           <Button
             onClick={(e) => {
               e.preventDefault();
-              setShowModal(!showModal);
+              context.setShowModal(!context.showModal);
             }}
           >
             Add Recipe

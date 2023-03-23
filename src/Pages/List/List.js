@@ -1,11 +1,15 @@
 import "./List.scss";
 import ListItem from "../../components/ListItem/ListItem";
 import Button from "../../UI/Button/Button";
+import Portal from "../../portals/Portal";
+import Modal from "../../components/Modal/Modal";
+import ContextCurrentPage from "../../ContextCurrentPage";
+import { useContext } from "react";
 
 function List({ data, addButton }) {
-  const allReceptItem = [];
+  const context = useContext(ContextCurrentPage);
 
-  console.log(data);
+  const allReceptItem = [];
 
   if (data.length) {
     data.map((el) => el.items.forEach((elem) => allReceptItem.push(elem)));
@@ -14,9 +18,22 @@ function List({ data, addButton }) {
   return (
     <div className="list-page">
       <section className="section__list">
+        {context.showModal ? (
+          <Portal>
+            <Modal setShowModal={context.setShowModal} modalRecept={true} />
+          </Portal>
+        ) : null}
         <div className="container-less">
           {addButton ? (
-            <Button className="list__add-btn">Add Recept</Button>
+            <Button
+              onClick={() => {
+                console.log("hey");
+                context.setShowModal(!context.showModal);
+              }}
+              className="list__add-btn"
+            >
+              Add Recept
+            </Button>
           ) : null}
           <div className="list__wrapper">
             {allReceptItem.map((el, index) => (

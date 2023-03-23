@@ -7,6 +7,7 @@ import renderPage from "./renderPage";
 import receptsReducer from "./reducers/receptsReducer";
 
 function App() {
+  const [showModal, setShowModal] = useState(false);
   const [currentPage, setCurrentPage] = useState({});
   const [recepts, dispatch] = useReducer(receptsReducer, []);
 
@@ -54,6 +55,8 @@ function App() {
           data: recepts,
           adedRecept: adedData,
           deleteData: deleteData,
+          showModal: showModal,
+          setShowModal: setShowModal,
         }}
       >
         <Header setCurentPage={setCurrentPage} />

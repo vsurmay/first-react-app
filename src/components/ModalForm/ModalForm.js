@@ -3,41 +3,39 @@ import { useFormik } from "formik";
 import Label from "../../UI/Label/Label";
 import Button from "../../UI/Button/Button";
 import ContextCurrentPage from "../../ContextCurrentPage";
+import validateForms from "../../validateForm";
 
-const ModalForm = ({ data, setShowModal }) => {
+const ModalForm = ({ data, setShowModal, modalRecept }) => {
   const contextData = React.useContext(ContextCurrentPage);
-  // console.log(contextData);
+  const initialValues = modalRecept
+    ? {
+        name: "",
+        timeForDone: "",
+        description: "",
+        ingredients: "",
+        recipe: "",
+        image: "",
+      }
+    : {
+        name: "",
+        description: "",
+        image: "",
+      };
 
   const formik = useFormik({
-    initialValues: {
-      name: "",
-      description: "",
-      image: "",
-    },
+    initialValues: initialValues,
     validate: validateForms,
     onSubmit: (values) => {
       setShowModal(false);
-      values.items = [];
-      contextData.adedRecept(values);
+      if (modalRecept) {
+        console.log(values);
+      } else {
+        values.items = [];
+        contextData.adedRecept(values);
+      }
     },
   });
 
-  function validateForms(values) {
-    const errors = {};
-    if (values.name.length === 0) {
-      errors.name = "Please enter valid values";
-    }
-
-    if (values.description.length === 0) {
-      errors.description = "Please enter valid values";
-    }
-
-    if (!/^https:\/\/robohash\.org\//.test(values.image)) {
-      errors.image = "Please enter valid values";
-    }
-
-    return errors;
-  }
   return (
     <form onSubmit={formik.handleSubmit}>
       {data.map((el, index) => (

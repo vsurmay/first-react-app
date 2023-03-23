@@ -9,8 +9,6 @@ function receptsReducer(state, action) {
     }
 
     case "delete": {
-      console.log(state);
-      console.log(action.idEl);
       return state.filter((el) => el.id !== action.idDelete);
     }
 

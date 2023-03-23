@@ -1,10 +1,11 @@
-import React, { useRef } from "react";
 import "./Modal.scss";
+import React, { useRef } from "react";
 import cancel from "../../img/cancel.svg";
 import ModalForm from "../ModalForm/ModalForm";
-import dataForm from "../../formdata";
+import dataFormDish from "../../formDatas/formDataDish";
+import dataFormRecept from "../../formDatas/formDataRecept";
 
-const Modal = ({ setShowModal }) => {
+const Modal = ({ setShowModal, modalRecept }) => {
   const modalRef = useRef(null);
 
   return (
@@ -28,7 +29,11 @@ const Modal = ({ setShowModal }) => {
         >
           <img src={cancel} />
         </a>
-        <ModalForm setShowModal={setShowModal} data={dataForm} />
+        <ModalForm
+          setShowModal={setShowModal}
+          data={modalRecept ? dataFormRecept : dataFormDish}
+          modalRecept={modalRecept}
+        />
       </div>
     </div>
   );
