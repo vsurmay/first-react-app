@@ -3,12 +3,11 @@ import List from "./Pages/List/List";
 import Page from "./Pages/Page/Page";
 
 function renderPage(curentPage) {
-  console.log(curentPage);
   switch (curentPage.page) {
     case "Home":
       return <Page />;
     case "List":
-      return <List data={curentPage.data} />;
+      return <List data={curentPage.data} addButton={curentPage.addButton} />;
     case "Streach":
       return (
         <Detailes

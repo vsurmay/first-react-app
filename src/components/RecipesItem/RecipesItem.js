@@ -12,7 +12,11 @@ function RecipesItem({ element }) {
   return (
     <div
       onClick={() => {
-        context.setCurrentPage({ page: "List", data: [element] });
+        context.setCurrentPage({
+          page: "List",
+          data: [element],
+          addButton: true,
+        });
       }}
       className="recipes__item"
     >
