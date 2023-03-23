@@ -1,7 +1,6 @@
 import "./Label.scss";
 
 function Label(props) {
-  console.log(props.errors);
   return (
     <label className={props.detailes ? "detailes__label" : "modal__label"}>
       <span

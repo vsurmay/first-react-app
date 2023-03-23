@@ -165,6 +165,13 @@
         }
       ],
       "id": 4
+    },
+    {
+      "name": "Second Dish",
+      "description": "Potato with hot meat",
+      "image": "https://robohash.org/1aadaabaabaa",
+      "items": [],
+      "id": 5
     }
   ]
 }

@@ -23,6 +23,28 @@ function App() {
     });
   }
 
+  async function adedData(newVarietyDish) {
+    const response = await axios.post(
+      "http://localhost:3004/recipes",
+      newVarietyDish
+    );
+    dispatch({
+      type: "aded",
+      newVarDish: response.data,
+    });
+  }
+
+  async function deleteData(idEl) {
+    const response = await axios.delete(
+      `http://localhost:3004/recipes/${idEl}`
+    );
+    console.log(response);
+    dispatch({
+      type: "delete",
+      idDelete: idEl,
+    });
+  }
+
   return (
     <>
       <ContextCurrentPage.Provider
@@ -30,6 +52,8 @@ function App() {
           currentPage: currentPage,
           setCurrentPage: setCurrentPage,
           data: recepts,
+          adedRecept: adedData,
+          deleteData: deleteData,
         }}
       >
         <Header setCurentPage={setCurrentPage} />

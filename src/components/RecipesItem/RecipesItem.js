@@ -3,15 +3,16 @@ import React from "react";
 import Title from "../../UI/Title/Title";
 import Text from "../../UI/Text/Text";
 import Image from "../../UI/Image/Image";
+import Button from "../../UI/Button/Button";
 import ContextCurrentPage from "../../ContextCurrentPage";
 
 function RecipesItem({ element }) {
-  const currentPage = React.useContext(ContextCurrentPage);
+  const context = React.useContext(ContextCurrentPage);
 
   return (
     <div
       onClick={() => {
-        currentPage.setCurrentPage({ page: "List", data: [element] });
+        context.setCurrentPage({ page: "List", data: [element] });
       }}
       className="recipes__item"
     >
@@ -24,6 +25,16 @@ function RecipesItem({ element }) {
           {element.description}
         </Text>
       </div>
+      <Button
+        className="recipes__item-delete"
+        onClick={(e) => {
+          e.stopPropagation();
+          context.deleteData(element.id);
+        }}
+        back
+      >
+        Delete
+      </Button>
     </div>
   );
 }

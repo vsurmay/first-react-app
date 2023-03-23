@@ -1,13 +1,16 @@
 import Title from "../../UI/Title/Title";
 import RecipesItem from "../RecipesItem/RecipesItem";
 import "./Recipes.scss";
-import { useState } from "react";
+import React, { useState } from "react";
 import Modal from "../Modal/Modal";
 import Portal from "../../portals/Portal";
 import Button from "../../UI/Button/Button";
+import ContextCurrentPage from "../../ContextCurrentPage";
 
-function Recipes({ data }) {
+function Recipes() {
   const [showModal, setShowModal] = useState(false);
+
+  const context = React.useContext(ContextCurrentPage);
 
   return (
     <section className="section__recipes">
@@ -28,8 +31,10 @@ function Recipes({ data }) {
             Add Recipe
           </Button>
           <div className="recipes__wrapper">
-            {data
-              ? data.map((el) => <RecipesItem key={el.id} element={el} />)
+            {context.data
+              ? context.data.map((el) => (
+                  <RecipesItem key={el.id} element={el} />
+                ))
               : ""}
           </div>
         </div>

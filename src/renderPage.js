@@ -3,9 +3,10 @@ import List from "./Pages/List/List";
 import Page from "./Pages/Page/Page";
 
 function renderPage(curentPage) {
+  console.log(curentPage);
   switch (curentPage.page) {
     case "Home":
-      return <Page data={curentPage.data} />;
+      return <Page />;
     case "List":
       return <List data={curentPage.data} />;
     case "Streach":

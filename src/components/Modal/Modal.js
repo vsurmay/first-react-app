@@ -28,7 +28,7 @@ const Modal = ({ setShowModal }) => {
         >
           <img src={cancel} />
         </a>
-        <ModalForm data={dataForm} />
+        <ModalForm setShowModal={setShowModal} data={dataForm} />
       </div>
     </div>
   );
