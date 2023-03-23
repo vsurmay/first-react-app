@@ -1,7 +1,6 @@
 import "./Label.scss";
 
 function Label(props) {
-  console.log(props.type);
   return (
     <label className={props.detailes ? "detailes__label" : "modal__label"}>
       <span
@@ -13,9 +12,9 @@ function Label(props) {
       </span>
       <input
         onChange={props.handleChange}
-        name={props.text}
+        name={props.name}
         className={
-          props.detailes ? "detailes__label-input" : "detailes__label-input"
+          props.detailes ? "detailes__label-input" : "modal__label-input"
         }
         type={props.type}
       />

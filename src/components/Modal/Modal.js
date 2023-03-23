@@ -1,18 +1,11 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import "./Modal.scss";
 import cancel from "../../img/cancel.svg";
 import ModalForm from "../ModalForm/ModalForm";
+import dataForm from "../../formdata";
 
 const Modal = ({ setShowModal }) => {
   const modalRef = useRef(null);
-  const firstInputForm = useRef(null);
-
-  useEffect(() => {
-    if (modalRef.current) {
-      // console.log(firstInputForm.current);
-      // firstInputForm.current.focus();
-    }
-  }, []);
 
   return (
     <div
@@ -35,7 +28,7 @@ const Modal = ({ setShowModal }) => {
         >
           <img src={cancel} />
         </a>
-        <ModalForm firstInputForm={firstInputForm} />
+        <ModalForm data={dataForm} />
       </div>
     </div>
   );

@@ -1,14 +1,14 @@
 import React from "react";
 import { useFormik } from "formik";
 import Label from "../../UI/Label/Label";
+import Button from "../../UI/Button/Button";
 
-const ModalForm = ({ firstInputForm }) => {
-  const formText = ["name", "description"];
-
+const ModalForm = ({ data }) => {
   const formik = useFormik({
     initialValues: {
       name: "",
       description: "",
+      image: "",
     },
 
     onSubmit: (values) => {
@@ -17,26 +17,18 @@ const ModalForm = ({ firstInputForm }) => {
   });
   return (
     <form onSubmit={formik.handleSubmit}>
-      {formText.map((el, index) => (
+      {data.map((el, index) => (
         <Label
-          index={index}
           key={index}
-          text={el}
+          text={el.placeholder}
           handleChange={formik.handleChange}
-          type={"text"}
+          name={el.name}
+          type={el.type}
         />
       ))}
-
-      {/* <label>
-        <span>Variety dish</span>
-        <input
-          name="test"
-          onChange={formik.handleChange}
-          ref={firstInputForm}
-        />
-      </label>
-      <input name="description" onChange={formik.handleChange} /> */}
-      <button type="submit">Submit</button>
+      <Button className="modal__form-btn" type="submit">
+        Submit
+      </Button>
     </form>
   );
 };
