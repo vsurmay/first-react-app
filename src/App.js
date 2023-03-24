@@ -11,8 +11,6 @@ function App() {
   const [currentPage, setCurrentPage] = useState({});
   const [recepts, dispatch] = useReducer(receptsReducer, []);
 
-  // console.log(recepts);
-
   useEffect(() => {
     getData();
   }, []);
@@ -57,20 +55,20 @@ function App() {
   }
 
   async function deleteRecept(category, currentEl) {
-    category[0].items = category[0].items.filter(
+    const currentCategory = category.filter(
+      (el) => el.name === currentEl.category
+    );
+    currentCategory[0].items = currentCategory[0].items.filter(
       (el) => el.recipe !== currentEl.recipe
     );
-
-    // console.log(category[0]);
-
     const response = await axios.put(
-      `http://localhost:3004/recipes/${category[0].id}`,
-      category[0]
+      `http://localhost:3004/recipes/${currentCategory[0].id}`,
+      currentCategory[0]
     );
 
     dispatch({
       type: "deleteRecept",
-      id: category[0].id,
+      id: currentCategory[0].id,
       newData: response.data,
     });
   }

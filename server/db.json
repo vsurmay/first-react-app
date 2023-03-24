@@ -165,33 +165,6 @@
         }
       ],
       "id": 4
-    },
-    {
-      "name": "asdasdas",
-      "description": "dasdasd",
-      "image": "https://robohash.org/1aadaabaabaa",
-      "items": [],
-      "id": 5
-    },
-    {
-      "name": "asdasd",
-      "description": "asdasdasd",
-      "image": "https://robohash.org/1aadaabaabaa",
-      "items": [
-        {
-          "name": "test2",
-          "timeForDone": "asdasdasd",
-          "description": "asdsadasdasd",
-          "recipe": "asdasdasdasd",
-          "image": "https://robohash.org/1aadaabaabaa",
-          "ingredients": [
-            "asdasdads",
-            "asdasdasd"
-          ],
-          "category": "asdasd"
-        }
-      ],
-      "id": 6
     }
   ]
 }

@@ -8,7 +8,8 @@ import ContextCurrentPage from "../../ContextCurrentPage";
 
 function ListItem({ data, infoAboutList, addButton }) {
   const currentPage = React.useContext(ContextCurrentPage);
-
+  // console.log(infoAboutList);
+  // console.log(data);
   return (
     <div className="list__item">
       <Button
