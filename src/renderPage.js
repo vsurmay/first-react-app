@@ -13,6 +13,7 @@ function renderPage(curentPage) {
         <Detailes
           data={curentPage.data}
           infoAboutList={curentPage.infoAboutList}
+          addButton={curentPage.addButton}
         />
       );
 

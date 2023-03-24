@@ -7,7 +7,7 @@ import Text from "../../UI/Text/Text";
 import Button from "../../UI/Button/Button";
 import ContextCurrentPage from "../../ContextCurrentPage";
 
-function Detailes({ data, infoAboutList }) {
+function Detailes({ data, infoAboutList, addButton }) {
   const currentPage = React.useContext(ContextCurrentPage);
 
   return (
@@ -36,14 +36,16 @@ function Detailes({ data, infoAboutList }) {
                 </div>
               </div>
               <form className="detailes__form">
-                {data.ingredients.map((el, index) => (
-                  <Label
-                    key={index}
-                    text={el}
-                    detailes={true}
-                    type={"checkbox"}
-                  />
-                ))}
+                {data
+                  ? data.ingredients.map((el, index) => (
+                      <Label
+                        key={index}
+                        text={el}
+                        detailes={true}
+                        type={"checkbox"}
+                      />
+                    ))
+                  : null}
                 <Text recipe>{data.recipe}</Text>
                 <Button
                   back
@@ -52,6 +54,7 @@ function Detailes({ data, infoAboutList }) {
                     currentPage.setCurrentPage({
                       page: "List",
                       data: infoAboutList,
+                      addButton: addButton,
                     });
                   }}
                 >

@@ -8,8 +8,6 @@ import Button from "../../UI/Button/Button";
 import ContextCurrentPage from "../../ContextCurrentPage";
 
 function Recipes() {
-  // const [showModal, setShowModal] = useState(false);
-
   const context = React.useContext(ContextCurrentPage);
 
   return (

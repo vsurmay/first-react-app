@@ -6,11 +6,20 @@ import Title from "../../UI/Title/Title";
 import React from "react";
 import ContextCurrentPage from "../../ContextCurrentPage";
 
-function ListItem({ data, infoAboutList }) {
+function ListItem({ data, infoAboutList, addButton }) {
   const currentPage = React.useContext(ContextCurrentPage);
 
   return (
     <div className="list__item">
+      <Button
+        onClick={() => {
+          currentPage.deleteRecept(infoAboutList, data);
+        }}
+        back
+        className="list__item-delete"
+      >
+        Delete recept
+      </Button>
       <Image url={data.image} alt={data.name} />
       <div className="list__item-discription">
         <ListItemLink />
@@ -26,6 +35,7 @@ function ListItem({ data, infoAboutList }) {
             page: "Streach",
             data: data,
             infoAboutList: infoAboutList,
+            addButton: addButton,
           });
         }}
         listButton

@@ -31,7 +31,6 @@ function List({ data, addButton }) {
           {addButton ? (
             <Button
               onClick={() => {
-                console.log("hey");
                 context.setShowModal(!context.showModal);
               }}
               className="list__add-btn"
@@ -41,7 +40,12 @@ function List({ data, addButton }) {
           ) : null}
           <div className="list__wrapper">
             {allReceptItem.map((el, index) => (
-              <ListItem infoAboutList={data} key={index} data={el} />
+              <ListItem
+                addButton={addButton}
+                infoAboutList={data}
+                key={index}
+                data={el}
+              />
             ))}
           </div>
         </div>

@@ -12,6 +12,12 @@ function receptsReducer(state, action) {
       return state.filter((el) => el.id !== action.idDelete);
     }
 
+    case "deleteRecept": {
+      const newState = state.filter((el) => el.id !== action.id);
+      newState.push(action.newData);
+      return newState;
+    }
+
     default: {
       return state;
     }

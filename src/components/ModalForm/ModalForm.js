@@ -34,7 +34,6 @@ const ModalForm = ({ currentRecipe, data, setShowModal, modalRecept }) => {
       setShowModal(false);
       if (modalRecept) {
         values.ingredients = [...ingridients];
-        console.log(values);
         contextData.changeData(currentRecipe, values);
       } else {
         values.items = [];

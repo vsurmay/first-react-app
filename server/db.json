@@ -167,39 +167,28 @@
       "id": 4
     },
     {
-      "name": "asdasd",
-      "description": "asdasdasd",
+      "name": "asdasdas",
+      "description": "dasdasd",
       "image": "https://robohash.org/1aadaabaabaa",
       "items": [],
       "id": 5
     },
     {
-      "name": "asd",
-      "description": "asdasd",
+      "name": "asdasd",
+      "description": "asdasdasd",
       "image": "https://robohash.org/1aadaabaabaa",
       "items": [
         {
-          "name": "asdasda",
+          "name": "test2",
           "timeForDone": "asdasdasd",
-          "description": "asdasd",
-          "recipe": "asdasd",
-          "image": "https://robohash.org/1aadaabaabaa",
-          "category": "asd"
-        },
-        {
-          "name": "asdasd",
-          "timeForDone": "dasdasd",
-          "description": "asdasdas",
-          "recipe": "asdasd",
+          "description": "asdsadasdasd",
+          "recipe": "asdasdasdasd",
           "image": "https://robohash.org/1aadaabaabaa",
           "ingredients": [
-            "asdasdasd",
-            "asdasdasd",
-            "asdasdasd",
-            "asdasdasd",
+            "asdasdads",
             "asdasdasd"
           ],
-          "category": "asd"
+          "category": "asdasd"
         }
       ],
       "id": 6
