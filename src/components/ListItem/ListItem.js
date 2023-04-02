@@ -7,7 +7,7 @@ import React from "react";
 import { useDispatch } from "react-redux/es/exports";
 import { deleteDish } from "../../redux/actions/actionDish";
 
-function ListItem({ data }) {
+function ListItem({ data, setCurrentPage, infoAboutList }) {
   const dispatch = useDispatch();
   return (
     <div className="list__item">
@@ -31,12 +31,7 @@ function ListItem({ data }) {
       </Title>
       <Button
         onClick={() => {
-          //   currentPage.setCurrentPage({
-          //     page: "Streach",
-          //     data: data,
-          //     infoAboutList: infoAboutList,
-          //     addButton: addButton,
-          //   });
+          setCurrentPage({ page: "Streach", data, infoAboutList });
         }}
         listButton
       >

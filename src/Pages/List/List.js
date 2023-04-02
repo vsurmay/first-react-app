@@ -7,7 +7,7 @@ import { useState } from "react";
 import dataFormRecept from "../../formDatas/formDataRecept";
 import { useSelector } from "react-redux/es/exports";
 
-function List({ addButton, recipeId }) {
+function List({ addButton, recipeId, setCurrentPage }) {
   const [showModal, setShowModal] = useState(false);
 
   const data = useSelector((state) => state.dish.data);
@@ -47,8 +47,9 @@ function List({ addButton, recipeId }) {
             {filterData
               ? filterData.map((el, index) => (
                   <ListItem
+                    setCurrentPage={setCurrentPage}
                     addButton={addButton}
-                    infoAboutList={data}
+                    infoAboutList={filterData}
                     key={index}
                     data={el}
                   />
