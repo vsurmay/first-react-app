@@ -4,19 +4,16 @@ import Title from "../../UI/Title/Title";
 import Text from "../../UI/Text/Text";
 import Image from "../../UI/Image/Image";
 import Button from "../../UI/Button/Button";
-import ContextCurrentPage from "../../ContextCurrentPage";
 
 function RecipesItem({ element }) {
-  const context = React.useContext(ContextCurrentPage);
-
   return (
     <div
       onClick={() => {
-        context.setCurrentPage({
-          page: "List",
-          data: [element],
-          addButton: true,
-        });
+        // context.setCurrentPage({
+        //   page: "List",
+        //   data: [element],
+        //   addButton: true,
+        // });
       }}
       className="recipes__item"
     >
@@ -33,7 +30,6 @@ function RecipesItem({ element }) {
         className="recipes__item-delete"
         onClick={(e) => {
           e.stopPropagation();
-          context.deleteData(element.id);
         }}
         back
       >

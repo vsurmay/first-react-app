@@ -1,14 +1,11 @@
 import "./Hero.scss";
 import React from "react";
-import ContextCurrentPage from "../../ContextCurrentPage";
 import Title from "../../UI/Title/Title";
 import Text from "../../UI/Text/Text";
 import Button from "../../UI/Button/Button";
 import image from "../../img/hero.png";
 
 function Hero() {
-  const contextData = React.useContext(ContextCurrentPage);
-
   return (
     <section className="section__hero">
       <div className="container-less">
@@ -21,10 +18,6 @@ function Hero() {
             <Button
               onClick={(e) => {
                 e.preventDefault();
-                contextData.setCurrentPage({
-                  page: "List",
-                  data: contextData.data,
-                });
               }}
               className="hero__btn"
             >

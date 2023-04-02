@@ -5,16 +5,13 @@ import React, { useState } from "react";
 import Modal from "../Modal/Modal";
 import Portal from "../../portals/Portal";
 import Button from "../../UI/Button/Button";
-import ContextCurrentPage from "../../ContextCurrentPage";
 
 function Recipes() {
-  const context = React.useContext(ContextCurrentPage);
-
   return (
     <section className="section__recipes">
-      {context.showModal ? (
+      {true ? (
         <Portal>
-          <Modal setShowModal={context.setShowModal} />
+          <Modal />
         </Portal>
       ) : null}
       <div className="container">
@@ -23,17 +20,16 @@ function Recipes() {
           <Button
             onClick={(e) => {
               e.preventDefault();
-              context.setShowModal(!context.showModal);
             }}
           >
             Add Recipe
           </Button>
           <div className="recipes__wrapper">
-            {context.data
+            {/* {context.data
               ? context.data.map((el) => (
                   <RecipesItem key={el.id} element={el} />
                 ))
-              : ""}
+              : ""} */}
           </div>
         </div>
       </div>
