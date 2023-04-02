@@ -3,22 +3,12 @@ import ListItem from "../../components/ListItem/ListItem";
 import Button from "../../UI/Button/Button";
 import Portal from "../../portals/Portal";
 import Modal from "../../components/Modal/Modal";
-import ContextCurrentPage from "../../ContextCurrentPage";
-import { useContext } from "react";
 
-function List({ data, addButton }) {
-  const context = useContext(ContextCurrentPage);
-
-  const allReceptItem = [];
-
-  if (data.length) {
-    data.map((el) => el.items.forEach((elem) => allReceptItem.push(elem)));
-  }
-
+function List({ addButton, data }) {
   return (
     <div className="list-page">
       <section className="section__list">
-        {context.showModal ? (
+        {/* {context.showModal ? (
           <Portal>
             <Modal
               currentRecipe={data}
@@ -26,12 +16,12 @@ function List({ data, addButton }) {
               modalRecept={true}
             />
           </Portal>
-        ) : null}
+        ) : null} */}
         <div className="container-less">
           {addButton ? (
             <Button
-              onClick={() => {
-                context.setShowModal(!context.showModal);
+              onClick={(e) => {
+                e.preventDefault();
               }}
               className="list__add-btn"
             >
@@ -39,14 +29,16 @@ function List({ data, addButton }) {
             </Button>
           ) : null}
           <div className="list__wrapper">
-            {allReceptItem.map((el, index) => (
-              <ListItem
-                addButton={addButton}
-                infoAboutList={data}
-                key={index}
-                data={el}
-              />
-            ))}
+            {data
+              ? data.map((el, index) => (
+                  <ListItem
+                    addButton={addButton}
+                    infoAboutList={data}
+                    key={index}
+                    data={el}
+                  />
+                ))
+              : null}
           </div>
         </div>
       </section>

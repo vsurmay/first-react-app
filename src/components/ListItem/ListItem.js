@@ -4,17 +4,13 @@ import ListItemLink from "../../UI/ListItemLink/ListItemLink";
 import Image from "../../UI/Image/Image";
 import Title from "../../UI/Title/Title";
 import React from "react";
-import ContextCurrentPage from "../../ContextCurrentPage";
 
 function ListItem({ data, infoAboutList, addButton }) {
-  const currentPage = React.useContext(ContextCurrentPage);
-  // console.log(infoAboutList);
-  // console.log(data);
   return (
     <div className="list__item">
       <Button
         onClick={() => {
-          currentPage.deleteRecept(infoAboutList, data);
+          //   currentPage.deleteRecept(infoAboutList, data);
         }}
         back
         className="list__item-delete"
@@ -32,12 +28,12 @@ function ListItem({ data, infoAboutList, addButton }) {
       </Title>
       <Button
         onClick={() => {
-          currentPage.setCurrentPage({
-            page: "Streach",
-            data: data,
-            infoAboutList: infoAboutList,
-            addButton: addButton,
-          });
+          //   currentPage.setCurrentPage({
+          //     page: "Streach",
+          //     data: data,
+          //     infoAboutList: infoAboutList,
+          //     addButton: addButton,
+          //   });
         }}
         listButton
       >

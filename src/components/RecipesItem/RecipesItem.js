@@ -4,8 +4,12 @@ import Title from "../../UI/Title/Title";
 import Text from "../../UI/Text/Text";
 import Image from "../../UI/Image/Image";
 import Button from "../../UI/Button/Button";
+import { useDispatch } from "react-redux/es/hooks/useDispatch";
+import { deleteRecept } from "../../redux/actions/actionsRecept";
 
 function RecipesItem({ element }) {
+  const dispatch = useDispatch();
+
   return (
     <div
       onClick={() => {
@@ -30,6 +34,7 @@ function RecipesItem({ element }) {
         className="recipes__item-delete"
         onClick={(e) => {
           e.stopPropagation();
+          dispatch(deleteRecept(element.id));
         }}
         back
       >

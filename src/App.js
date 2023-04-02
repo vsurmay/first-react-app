@@ -1,20 +1,38 @@
 import "./App.scss";
-import React, { useEffect, useReducer, useState } from "react";
-import axios from "axios";
+import React, { useState } from "react";
 import Header from "./components/Header/Header";
-import { useSelector } from "react-redux";
+import Page from "./Pages/Page/Page";
+import List from "./Pages/List/List";
+import Detailes from "./Pages/Detailes/Detailes";
 
 function App() {
-  const [showModal, setShowModal] = useState(false);
-
-  const data = useSelector((state) => {
-    console.log(state);
+  const [currentPage, setCurrentPage] = useState({
+    page: "Home",
+    data: null,
+    addButton: false,
   });
+
+  const renderPage = (obj) => {
+    console.log(obj);
+    switch (obj.page) {
+      case "Home":
+        return <Page data={obj.data} />;
+
+      case "List":
+        return <List data={obj.data} addButton={obj.addButton} />;
+
+      case "Streach":
+        return <Detailes data={obj.data} />;
+
+      default:
+        return <Page data={obj.data} />;
+    }
+  };
 
   return (
     <>
-      {/* <Header /> */}
-      hey
+      <Header setCurrentPage={setCurrentPage} currentPage={currentPage} />
+      {renderPage(currentPage)}
     </>
   );
 }

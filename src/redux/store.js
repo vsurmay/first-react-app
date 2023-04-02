@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import reducerPages from "./reducers/reducerPages";
+import reducerDish from "./reducers/reducerDish";
+import reduceeRecipes from "./reducers/reducerRecipes";
 
-configureStore({
+export default configureStore({
   reducer: {
-    pages: reducerPages,
+    recipe: reduceeRecipes,
+    dish: reducerDish,
   },
 });
-
-export default configureStore;
