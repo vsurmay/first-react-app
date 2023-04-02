@@ -4,7 +4,7 @@ import Recipes from "../../components/Recipes/Recipes";
 function Page({ setCurrentPage }) {
   return (
     <div className="page-page">
-      <Hero />
+      <Hero setCurrentPage={setCurrentPage} />
       <Recipes setCurrentPage={setCurrentPage} />
     </div>
   );

@@ -19,7 +19,6 @@ const ModalForm = ({ recipeId, data, setShowModal, modalRecept }) => {
         name: "",
         timeForDone: "",
         description: "",
-        // ingredients: "",
         recipe: "",
         image: "",
       }

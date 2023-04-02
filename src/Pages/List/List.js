@@ -18,7 +18,6 @@ function List({ addButton, recipeId }) {
     filterData = [...data];
   }
 
-  console.log(filterData);
   return (
     <div className="list-page">
       <section className="section__list">

@@ -13,7 +13,6 @@ function App() {
   });
 
   const renderPage = (obj) => {
-    console.log(obj);
     switch (obj.page) {
       case "Home":
         return <Page data={obj.data} setCurrentPage={setCurrentPage} />;

@@ -7,7 +7,7 @@ import React from "react";
 import { useDispatch } from "react-redux/es/exports";
 import { deleteDish } from "../../redux/actions/actionDish";
 
-function ListItem({ data, infoAboutList, addButton }) {
+function ListItem({ data }) {
   const dispatch = useDispatch();
   return (
     <div className="list__item">

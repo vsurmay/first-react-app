@@ -4,8 +4,11 @@ import Title from "../../UI/Title/Title";
 import Text from "../../UI/Text/Text";
 import Button from "../../UI/Button/Button";
 import image from "../../img/hero.png";
+import { useSelector } from "react-redux/es/exports";
 
-function Hero() {
+function Hero({ setCurrentPage }) {
+  const data = useSelector((state) => state.dish.data);
+  console.log(data);
   return (
     <section className="section__hero">
       <div className="container-less">
@@ -18,6 +21,7 @@ function Hero() {
             <Button
               onClick={(e) => {
                 e.preventDefault();
+                setCurrentPage({ page: "List", data });
               }}
               className="hero__btn"
             >
