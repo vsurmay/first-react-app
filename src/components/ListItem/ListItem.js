@@ -4,13 +4,16 @@ import ListItemLink from "../../UI/ListItemLink/ListItemLink";
 import Image from "../../UI/Image/Image";
 import Title from "../../UI/Title/Title";
 import React from "react";
+import { useDispatch } from "react-redux/es/exports";
+import { deleteDish } from "../../redux/actions/actionDish";
 
 function ListItem({ data, infoAboutList, addButton }) {
+  const dispatch = useDispatch();
   return (
     <div className="list__item">
       <Button
         onClick={() => {
-          //   currentPage.deleteRecept(infoAboutList, data);
+          dispatch(deleteDish(data.id));
         }}
         back
         className="list__item-delete"

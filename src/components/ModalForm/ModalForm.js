@@ -6,8 +6,9 @@ import Button from "../../UI/Button/Button";
 import validateForms from "../../validateForm";
 import { useDispatch } from "react-redux/es/hooks/useDispatch";
 import { adedRecept } from "../../redux/actions/actionsRecept";
+import { addDish } from "../../redux/actions/actionDish";
 
-const ModalForm = ({ currentRecipe, data, setShowModal, modalRecept }) => {
+const ModalForm = ({ recipeId, data, setShowModal, modalRecept }) => {
   const [ingridients, setIngridients] = useState([]);
   const [ingridientsInput, setIngridientsInput] = useState("");
 
@@ -34,8 +35,8 @@ const ModalForm = ({ currentRecipe, data, setShowModal, modalRecept }) => {
     onSubmit: (values) => {
       setShowModal(false);
       if (modalRecept) {
-        values.ingredients = [...ingridients];
-        // contextData.changeData(currentRecipe, values);
+        console.log(values, "modal Recipe");
+        dispatch(addDish({ ...values, recipeId: recipeId }));
       } else {
         console.log(values);
         dispatch(adedRecept(values));

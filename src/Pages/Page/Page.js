@@ -1,11 +1,11 @@
 import Hero from "../../components/Hero/Hero";
 import Recipes from "../../components/Recipes/Recipes";
 
-function Page() {
+function Page({ setCurrentPage }) {
   return (
     <div className="page-page">
       <Hero />
-      <Recipes />
+      <Recipes setCurrentPage={setCurrentPage} />
     </div>
   );
 }

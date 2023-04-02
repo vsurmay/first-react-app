@@ -6,18 +6,22 @@ import Image from "../../UI/Image/Image";
 import Button from "../../UI/Button/Button";
 import { useDispatch } from "react-redux/es/hooks/useDispatch";
 import { deleteRecept } from "../../redux/actions/actionsRecept";
+import { useSelector } from "react-redux";
 
-function RecipesItem({ element }) {
+function RecipesItem({ element, setCurrentPage }) {
   const dispatch = useDispatch();
+
+  const allDishes = useSelector((state) => state.dish.data);
 
   return (
     <div
       onClick={() => {
-        // context.setCurrentPage({
-        //   page: "List",
-        //   data: [element],
-        //   addButton: true,
-        // });
+        setCurrentPage({
+          page: "List",
+          data: allDishes,
+          addButton: true,
+          recipeId: element.id,
+        });
       }}
       className="recipes__item"
     >

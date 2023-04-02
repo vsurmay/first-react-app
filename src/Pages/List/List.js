@@ -3,25 +3,41 @@ import ListItem from "../../components/ListItem/ListItem";
 import Button from "../../UI/Button/Button";
 import Portal from "../../portals/Portal";
 import Modal from "../../components/Modal/Modal";
+import { useState } from "react";
+import dataFormRecept from "../../formDatas/formDataRecept";
+import { useSelector } from "react-redux/es/exports";
 
-function List({ addButton, data }) {
+function List({ addButton, recipeId }) {
+  const [showModal, setShowModal] = useState(false);
+
+  const data = useSelector((state) => state.dish.data);
+  let filterData = [];
+  if (recipeId) {
+    filterData = data.filter((el) => el.recipeId === recipeId);
+  } else {
+    filterData = [...data];
+  }
+
+  console.log(filterData);
   return (
     <div className="list-page">
       <section className="section__list">
-        {/* {context.showModal ? (
+        {showModal ? (
           <Portal>
             <Modal
-              currentRecipe={data}
-              setShowModal={context.setShowModal}
+              data={dataFormRecept}
+              setShowModal={setShowModal}
               modalRecept={true}
+              recipeId={recipeId}
             />
           </Portal>
-        ) : null} */}
+        ) : null}
         <div className="container-less">
           {addButton ? (
             <Button
               onClick={(e) => {
                 e.preventDefault();
+                setShowModal(true);
               }}
               className="list__add-btn"
             >
@@ -29,8 +45,8 @@ function List({ addButton, data }) {
             </Button>
           ) : null}
           <div className="list__wrapper">
-            {data
-              ? data.map((el, index) => (
+            {filterData
+              ? filterData.map((el, index) => (
                   <ListItem
                     addButton={addButton}
                     infoAboutList={data}

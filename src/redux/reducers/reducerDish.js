@@ -23,14 +23,14 @@ const reducerDish = (state = defaultValue, action) => {
     case DISH_LOADER:
       return { ...state, loader: action.payload };
 
-    // case ADED_DISH:
-    //   return { ...state, data: [...state.data, action.payload] };
+    case ADED_DISH:
+      return { ...state, data: [...state.data, action.payload] };
 
-    // case DELETE_DISH:
-    //   return {
-    //     ...state,
-    //     data: state.data.filter((el) => el.id !== action.payload),
-    //   };
+    case DELETE_DISH:
+      return {
+        ...state,
+        data: state.data.filter((el) => el.id !== action.payload),
+      };
 
     default:
       console.log("DEFAULT!!!!!!!!!!!!");

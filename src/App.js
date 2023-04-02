@@ -16,16 +16,23 @@ function App() {
     console.log(obj);
     switch (obj.page) {
       case "Home":
-        return <Page data={obj.data} />;
+        return <Page data={obj.data} setCurrentPage={setCurrentPage} />;
 
       case "List":
-        return <List data={obj.data} addButton={obj.addButton} />;
+        return (
+          <List
+            data={obj.data}
+            addButton={obj.addButton}
+            setCurrentPage={setCurrentPage}
+            recipeId={obj.recipeId}
+          />
+        );
 
       case "Streach":
-        return <Detailes data={obj.data} />;
+        return <Detailes data={obj.data} setCurrentPage={setCurrentPage} />;
 
       default:
-        return <Page data={obj.data} />;
+        return <Page data={obj.data} setCurrentPage={setCurrentPage} />;
     }
   };
 

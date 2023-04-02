@@ -10,7 +10,7 @@ import { useSelector } from "react-redux/es/hooks/useSelector";
 import { getRecept } from "../../redux/actions/actionsRecept";
 import formDataDish from "../../formDatas/formDataDish";
 
-function Recipes() {
+function Recipes({ setCurrentPage }) {
   const [showModal, setShowModal] = useState(false);
 
   const dispatch = useDispatch();
@@ -42,7 +42,11 @@ function Recipes() {
           <div className="recipes__wrapper">
             {recipe.data
               ? recipe.data.map((el) => (
-                  <RecipesItem key={el.id} element={el} />
+                  <RecipesItem
+                    setCurrentPage={setCurrentPage}
+                    key={el.id}
+                    element={el}
+                  />
                 ))
               : ""}
           </div>
