@@ -6,8 +6,7 @@ import Label from "../../UI/Label/Label";
 import Text from "../../UI/Text/Text";
 import Button from "../../UI/Button/Button";
 
-function Detailes({ data, setCurrentPage, infoAboutList, addButton }) {
-  console.log(data);
+function Detailes({ data, setCurrentPage, addButton }) {
   return (
     <div className="detailes-page">
       {!data ? (
@@ -50,8 +49,6 @@ function Detailes({ data, setCurrentPage, infoAboutList, addButton }) {
                   onClick={() => {
                     setCurrentPage({
                       page: "List",
-                      data: infoAboutList,
-                      addButton: true,
                     });
                   }}
                 >

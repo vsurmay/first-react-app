@@ -28,7 +28,13 @@ function App() {
         );
 
       case "Streach":
-        return <Detailes data={obj.data} setCurrentPage={setCurrentPage} />;
+        return (
+          <Detailes
+            data={obj.data}
+            setCurrentPage={setCurrentPage}
+            infoAboutList={obj.infoAboutList}
+          />
+        );
 
       default:
         return <Page data={obj.data} setCurrentPage={setCurrentPage} />;

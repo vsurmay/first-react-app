@@ -8,7 +8,6 @@ import { useSelector } from "react-redux/es/exports";
 
 function Hero({ setCurrentPage }) {
   const data = useSelector((state) => state.dish.data);
-  console.log(data);
   return (
     <section className="section__hero">
       <div className="container-less">

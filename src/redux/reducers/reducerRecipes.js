@@ -33,7 +33,6 @@ const reduceeRecipes = (state = defaultValue, action) => {
       };
 
     default:
-      console.log("DEFAULT!!!!!!!!!!!!");
       return state;
   }
 };

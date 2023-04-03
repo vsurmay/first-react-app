@@ -33,7 +33,6 @@ const reducerDish = (state = defaultValue, action) => {
       };
 
     default:
-      console.log("DEFAULT!!!!!!!!!!!!");
       return state;
   }
 };
