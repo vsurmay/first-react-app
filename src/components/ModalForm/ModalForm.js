@@ -34,10 +34,11 @@ const ModalForm = ({ recipeId, data, setShowModal, modalRecept }) => {
     onSubmit: (values) => {
       setShowModal(false);
       if (modalRecept) {
-        console.log(values, "modal Recipe");
-        dispatch(addDish({ ...values, recipeId: recipeId }));
+        console.log(ingridients);
+        dispatch(
+          addDish({ ...values, recipeId: recipeId, ingredients: ingridients })
+        );
       } else {
-        console.log(values);
         dispatch(adedRecept(values));
       }
     },

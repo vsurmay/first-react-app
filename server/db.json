@@ -175,22 +175,18 @@
       "name": "Garlic Bread"
     },
     {
-      "name": "asdasd",
-      "timeForDone": "asdasdas",
-      "description": "asdasd",
-      "recipe": "daasdasdasd",
-      "image": "https://robohash.org/1aadaabaabaa",
-      "recipeId": 5,
-      "id": 3
-    },
-    {
-      "name": "asdasdasd",
+      "name": "asdasdas",
       "timeForDone": "asdasdasd",
-      "description": "asdasdasd",
-      "recipe": "asdasdasdas",
+      "description": "dasdasd",
+      "recipe": "asdasdasd",
       "image": "https://robohash.org/1aadaabaabaa",
       "recipeId": 5,
-      "id": 4
+      "ingredients": [
+        "asdasd",
+        "asdasdasda",
+        "asdasd"
+      ],
+      "id": 3
     }
   ]
 }
